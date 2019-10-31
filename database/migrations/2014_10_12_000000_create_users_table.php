@@ -31,9 +31,13 @@ class CreateUsersTable extends Migration
   *
   * @return void
   */
+<<<<<<< Updated upstream
   public function down()
 
   {
+=======
+  public function down() {
+>>>>>>> Stashed changes
     Schema::dropIfExists('users');
   }
 }
