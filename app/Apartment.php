@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Service;
+use App\Sponsorship;
 
 class Apartment extends Model
 {
@@ -28,6 +29,11 @@ class Apartment extends Model
   public function services()
   {
     return $this -> belongsToMany(Service::class);
+  }
+
+  public function sponsorships()
+  {
+    return $this -> belongsToMany(Sponsorship::class);
   }
 
 
