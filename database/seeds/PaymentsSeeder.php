@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Payment;
+use App\Apartment;
 
 class PaymentsSeeder extends Seeder
 {
@@ -12,6 +13,11 @@ class PaymentsSeeder extends Seeder
      */
     public function run()
     {
-        factory(Payment::class, 50) -> create();
+        factory(Payment::class, 50)
+              -> create()
+              -> each(function($payment) {
+                $apartments = Apartment::inRandomOrder() -> take(rand(0, 10)) -> get(); //da rivedere numero rand
+                $payment -> apartments() -> attach($apartments);
+              });
     }
 }

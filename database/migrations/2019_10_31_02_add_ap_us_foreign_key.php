@@ -47,6 +47,19 @@ class AddApUsForeignKey extends Migration
              -> on('sponsorships');
     });
 
+    Schema::table('apartment_payment', function (Blueprint $table) {
+
+      $table -> bigInteger('apartment_id') -> unsigned() -> index();
+      $table -> foreign('apartment_id', 'apartment_payment_apartment')
+             -> references('id')
+             -> on('apartments');
+
+      $table -> bigInteger('payment_id') -> unsigned() -> index();
+      $table -> foreign('payment_id', 'apartment_payment_payment')
+             -> references('id')
+             -> on('payments');
+    });
+
 
   }
 
@@ -79,6 +92,15 @@ class AddApUsForeignKey extends Migration
 
       $table -> dropForeign('apartment_sponsorship_sponsorship');
       $table -> dropColumn('sponsorship_id');
+    });
+
+    Schema::table('apartment_payment', function (Blueprint $table) {
+
+      $table -> dropForeign('apartment_payment_apartment');
+      $table -> dropColumn('apartment_id');
+
+      $table -> dropForeign('apartment_payment_payment');
+      $table -> dropColumn('payment_id');
     });
   }
 }

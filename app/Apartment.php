@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\User;
 use App\Service;
 use App\Sponsorship;
+use App\Payment;
 
 class Apartment extends Model
 {
@@ -34,6 +35,11 @@ class Apartment extends Model
   public function sponsorships()
   {
     return $this -> belongsToMany(Sponsorship::class);
+  }
+
+  public function payments()
+  {
+    return $this -> belongsToMany(Payment::class);
   }
 
 
