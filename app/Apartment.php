@@ -7,6 +7,7 @@ use App\User;
 use App\Service;
 use App\Sponsorship;
 use App\Payment;
+use App\Message;
 
 class Apartment extends Model
 {
@@ -40,6 +41,11 @@ class Apartment extends Model
   public function payments()
   {
     return $this -> belongsToMany(Payment::class);
+  }
+
+  public function messages()
+  {
+    return $this -> hasMany(Message::class);
   }
 
 

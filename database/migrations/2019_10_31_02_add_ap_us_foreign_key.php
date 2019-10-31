@@ -13,6 +13,9 @@ class AddApUsForeignKey extends Migration
   */
   public function up()
   {
+
+    /* COLLEGAMENTI ONE TO MANY */
+    //collegamento tabella Apartment e tabella User
     Schema::table('apartments', function (Blueprint $table) {
 
       $table -> bigInteger('user_id') -> unsigned() -> index();
@@ -21,6 +24,17 @@ class AddApUsForeignKey extends Migration
              -> on('users');
     });
 
+    //collegamento tabella Apartment e tabella Message
+    Schema::table('messages', function (Blueprint $table) {
+
+      $table -> bigInteger('apartment_id') -> unsigned() -> index();
+      $table -> foreign('apartment_id', 'apartment')
+             -> references('id')
+             -> on('apartments');
+    });
+
+    /* COLLEGAMENTI MANY TO MANY */
+    //collegamento tabella Apartment e tabella Service
     Schema::table('apartment_service', function (Blueprint $table) {
 
       $table -> bigInteger('apartment_id') -> unsigned() -> index();
@@ -34,6 +48,7 @@ class AddApUsForeignKey extends Migration
              -> on('services');
     });
 
+    //collegamento tabella Apartment e tabella Sponsorship
     Schema::table('apartment_sponsorship', function (Blueprint $table) {
 
       $table -> bigInteger('apartment_id') -> unsigned() -> index();
@@ -47,6 +62,7 @@ class AddApUsForeignKey extends Migration
              -> on('sponsorships');
     });
 
+    //collegamento tabella Apartment e tabella Payment
     Schema::table('apartment_payment', function (Blueprint $table) {
 
       $table -> bigInteger('apartment_id') -> unsigned() -> index();
@@ -59,8 +75,6 @@ class AddApUsForeignKey extends Migration
              -> references('id')
              -> on('payments');
     });
-
-
   }
 
   /**
@@ -70,12 +84,24 @@ class AddApUsForeignKey extends Migration
   */
   public function down()
   {
+    
+    /* COLLEGAMENTI ONE TO MANY */
+    //collegamento tabella Apartment e tabella User
     Schema::table('apartments', function (Blueprint $table) {
 
       $table -> dropForeign('user');
       $table -> dropColumn('user_id');
     });
 
+    //collegamento tabella Apartment e tabella Message
+    Schema::table('messages', function (Blueprint $table) {
+
+      $table -> dropForeign('apartment');
+      $table -> dropColumn('apartment_id');
+    });
+
+    /* COLLEGAMENTI MANY TO MANY */
+    //collegamento tabella Apartment e tabella Service
     Schema::table('apartment_service', function (Blueprint $table) {
 
       $table -> dropForeign('apartment_service_apartment');
@@ -85,6 +111,7 @@ class AddApUsForeignKey extends Migration
       $table -> dropColumn('service_id');
     });
 
+    //collegamento tabella Apartment e tabella Sponsorship
     Schema::table('apartment_sponsorship', function (Blueprint $table) {
 
       $table -> dropForeign('apartment_sponsorship_apartment');
@@ -94,6 +121,7 @@ class AddApUsForeignKey extends Migration
       $table -> dropColumn('sponsorship_id');
     });
 
+    //collegamento tabella Apartment e tabella Payment
     Schema::table('apartment_payment', function (Blueprint $table) {
 
       $table -> dropForeign('apartment_payment_apartment');
