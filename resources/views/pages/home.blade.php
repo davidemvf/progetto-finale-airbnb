@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <div class="container">
+  <div class="container_apartements">
 
     @foreach ($apartments as $apartment)
       <div class="box_apartement">

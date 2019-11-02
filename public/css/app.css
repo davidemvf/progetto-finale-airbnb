@@ -11106,7 +11106,7 @@ a.text-dark:focus {
   box-sizing: border-box;
 }
 
-.container {
+.container_apartements {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
