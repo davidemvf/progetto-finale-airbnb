@@ -15,9 +15,9 @@ class CreateUsersTable extends Migration
   {
     Schema::create('users', function (Blueprint $table) {
       $table->bigIncrements('id');
-      $table->string('name');
-      $table->string('lastname');
-      $table->date('date_of_birth');
+      $table->string('name')->nullable();
+      $table->string('lastname')->nullable();
+      $table->date('date_of_birth')->nullable();
       $table->string('email')->unique();
       $table->timestamp('email_verified_at')->nullable();
       $table->string('password');
@@ -31,13 +31,12 @@ class CreateUsersTable extends Migration
   *
   * @return void
   */
-<<<<<<< Updated upstream
-  public function down()
 
+
+
+  public function down()
   {
-=======
-  public function down() {
->>>>>>> Stashed changes
+
     Schema::dropIfExists('users');
   }
 }
