@@ -1,6 +1,7 @@
 @extends('layouts.main-layout')
 
 @section('content')
+  <a href="{{ route('apartment.create') }}">Create aprt</a>
 
   <div class="container_apartements">
 
@@ -9,6 +10,7 @@
 
         <h3>{{$apartment -> title}}</h3>
         <p>{{$apartment -> desc}}</p>
+        <img src="/img/{{ $apartment -> img }}"  width="50"alt="">
 
       </div>
 
