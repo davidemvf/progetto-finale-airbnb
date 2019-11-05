@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\ApartmentRequest;
 use App\Apartment;
+use App\Message;
+use App\Payment;
+use App\Service;
+use App\Sponsorship;
 
 class userAuthController extends Controller
 {
@@ -126,6 +130,10 @@ class userAuthController extends Controller
     public function destroy($id)
     {
         $apartment = Apartment::findOrFail($id);
+        $apartment->messages()->delete();
+        $apartment->payments()->sync([]);
+        $apartment->services()->sync([]);
+        $apartment->sponsorships()->sync([]);
         $apartment->delete();
         return redirect('/');
     }
