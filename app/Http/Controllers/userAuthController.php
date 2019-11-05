@@ -3,17 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// use Illuminate\Support\Facades\Auth;
-// use App\Http\Requests\ApartmentRequest;
+use App\Http\Requests\ApartmentRequest;
 use App\Apartment;
-use App\User;
 
 class userAuthController extends Controller
 {
-  public function __construct()
-  {
-      $this->middleware('auth');
-  }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -31,9 +29,7 @@ class userAuthController extends Controller
      */
     public function create()
     {
-        $users = User::all();
-
-        return view('pages.apartmentCreate', compact('users', 'apartment'));
+        return view('pages.apartmentCreate');
     }
 
     /**
@@ -54,25 +50,21 @@ class userAuthController extends Controller
         'square_meters'=> 'required',
         'address'=> 'required',
         'img'=> 'nullable|image|mimes:jpg,jpeg,png,svg|max:2048'
-
         ]);
 
+      $name = uniqid(date('HisYmd'));
 
       $file = $request -> file('img');
       if ($file) {
       $targetPath = "img";
-      $targetFile = "aprt-" . rand(1,9999) . "." . $file -> getClientOriginalExtension();
+      $targetFile = "aprt-" . $name . "." . $file -> getClientOriginalExtension();
       $file -> move($targetPath, $targetFile);
       $validated['img'] = $targetFile;
       }
 
-
       $validated['user_id'] = $request->user()->id;
       Apartment::create($validated);
-      return redirect('/home');
-
-
-
+      return redirect('/');
 
     }
 
@@ -84,7 +76,7 @@ class userAuthController extends Controller
      */
     public function show($id)
     {
-        //
+        // 
     }
 
     /**
@@ -95,7 +87,8 @@ class userAuthController extends Controller
      */
     public function edit($id)
     {
-        //
+        $apartment = Apartment::findOrFail($id);
+        return view('pages.apartmentEdit', compact('apartment'));
     }
 
     /**
@@ -105,9 +98,23 @@ class userAuthController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ApartmentRequest $request, $id)
     {
-        //
+        $validated = $request -> validated();
+        $apartment = Apartment::findOrFail($id);
+
+        $name = uniqid(date('HisYmd'));
+
+        $file = $request -> file('img');
+        if ($file) {
+        $targetPath = "img";
+        $targetFile = "aprt-" . $name . "." . $file -> getClientOriginalExtension();
+        $file -> move($targetPath, $targetFile);
+        $validated['img'] = $targetFile;
+        }
+
+        $apartment -> update($validated);
+        return redirect('/');
     }
 
     /**
@@ -118,6 +125,8 @@ class userAuthController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $apartment = Apartment::findOrFail($id);
+        $apartment->delete();
+        return redirect('/');
     }
 }

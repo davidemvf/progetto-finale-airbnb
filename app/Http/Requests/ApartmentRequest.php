@@ -31,8 +31,7 @@ class ApartmentRequest extends FormRequest
           'toilettes'=> 'required',
           'square_meters'=> 'required',
           'address'=> 'required',
-          'img'=> 'nullable|image|mimes:jpg,jpeg,png,svg|max:2048',
-          'user_id' => 'required'
+          'img'=> 'nullable|image|mimes:jpg,jpeg,png,svg|max:2048'
           // 'lat'=> 'required',
           // 'long'=> 'required'
         ];

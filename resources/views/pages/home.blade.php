@@ -11,13 +11,11 @@
         <h3>{{$apartment -> title}}</h3>
         <p>{{$apartment -> desc}}</p>
         <img src="/img/{{ $apartment -> img }}"  width="50"alt="">
-
+        <a href="{{ route('apartment.show', $apartment -> id) }}">READ MORE</a>
       </div>
 
     @endforeach
 
   </div>
-
-
 
 @endsection

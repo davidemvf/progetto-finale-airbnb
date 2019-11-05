@@ -13,9 +13,7 @@ class userSempliceController extends Controller
      */
     public function index()
     {
-
       $apartments = Apartment::all();
-
       return view('pages.home', compact('apartments'));
     }
 
@@ -48,7 +46,8 @@ class userSempliceController extends Controller
      */
     public function show($id)
     {
-        //
+        $apartment = Apartment::findOrFail($id);
+        return view('pages.apartmentShow', compact('apartment'));
     }
 
     /**
