@@ -11104,6 +11104,67 @@ a.text-dark:focus {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  list-style: none;
+}
+
+/* REGOLE DEL FOOTER -------------------------------------------------------- */
+
+footer {
+  /* Barra del Copyright ------------------------------------------------------ */
+}
+
+footer .background {
+  background-color: #e9ecef;
+}
+
+footer .copyright {
+  background-color: #343a40;
+  height: 72px;
+}
+
+footer .copyright .text-color {
+  font-family: "Poppins", sans-serif;
+  color: #dee2e6;
+  padding-top: 25px;
+  font-size: 14px;
+}
+
+.padding-sb {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.title-ft {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+footer p a {
+  color: #1abc9c;
+}
+
+footer p a:focus,
+footer p a:hover {
+  color: #148F77;
+}
+
+footer .fa {
+  padding: 0 20px 20px 20px;
+  font-size: 20px;
+  margin: 5px 2px;
+  color: #fff;
+}
+
+footer .fa:hover {
+  color: #1abc9c;
+  text-decoration: none;
 }
 
 .container_apartements {
@@ -11117,5 +11178,13 @@ a.text-dark:focus {
   border: 1px solid purple;
   margin: 5%;
   padding: 2%;
+}
+
+@media (min-width: 768px) {
+  /* Regole Responsive della Social Bar*/
+
+  footer .fa {
+    font-size: 30px;
+  }
 }
 

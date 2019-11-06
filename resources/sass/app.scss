@@ -7,11 +7,61 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  user-select: none;
+  list-style: none;
 }
+
+/* REGOLE DEL FOOTER -------------------------------------------------------- */
+footer {
+  .background {
+    background-color: #e9ecef;
+  }
+  /* Barra del Copyright ------------------------------------------------------ */
+  .copyright {
+    background-color: #343a40;
+    height: 72px;
+    .text-color {
+      font-family: 'Poppins', sans-serif;
+      color: #dee2e6;
+      padding-top: 25px;
+      font-size: 14px;
+    }
+  }
+}
+
+.padding-sb {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+.title-ft {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+footer p a {
+  color: #1abc9c;
+}
+footer p a:focus, footer p a:hover {
+  color: #148F77;
+}
+footer .fa {
+  padding: 0 20px 20px 20px;
+  font-size: 20px;
+  margin: 5px 2px;
+  color: #fff;
+}
+footer .fa:hover {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+// Inseriti all'inizio
 .container_apartements{
   display: flex;
   flex-wrap: wrap;
@@ -23,4 +73,11 @@
   border: 1px solid purple;
   margin: 5%;
   padding: 2%;
+}
+
+@media (min-width: 768px){
+  /* Regole Responsive della Social Bar*/
+  footer .fa {
+    font-size: 30px;
+  }
 }

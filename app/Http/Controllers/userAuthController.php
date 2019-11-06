@@ -6,10 +6,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ApartmentRequest;
 use App\Apartment;
-use App\Message;
-use App\Payment;
-use App\Service;
-use App\Sponsorship;
 
 class userAuthController extends Controller
 {
