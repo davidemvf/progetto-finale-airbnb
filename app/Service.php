@@ -8,12 +8,7 @@ use App\Apartment;
 class Service extends Model
 {
   protected $fillable = [
-    'wifi',
-    'pool',
-    'parking',
-    'reception',
-    'sauna',
-    'seaview'
+    'service_category'
   ];
 
   public function apartments()

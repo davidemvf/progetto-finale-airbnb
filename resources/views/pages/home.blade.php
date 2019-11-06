@@ -1,7 +1,12 @@
 @extends('layouts.main-layout')
 
 @section('content')
-  <a href="{{ route('apartment.create') }}">Create aprt</a>
+  @guest
+    <a href="#">CERCA APPARTAMENTO</a>
+  @else
+    <a href="{{ route('apartment.create') }}">NUOVO APPARTAMENTO</a>
+    <a href="{{ route('myapartment.show') }}">I MIEI APPARTAMENTI</a>
+  @endguest
 
   <div class="container_apartements">
 

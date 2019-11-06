@@ -35,6 +35,9 @@
       <label for="img">Immagine</label>
       <input type="file" name="img" accept="image/*">
 
+      <label for="wifi">WiFi</label>
+      <input type="checkbox" name="wifi" value="">
+
       <button type="submit" name="button">Update</button>
     </form>
   </div>

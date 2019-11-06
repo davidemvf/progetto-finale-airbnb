@@ -15,8 +15,8 @@ class CreateSponsorshipsTable extends Migration
     {
         Schema::create('sponsorships', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('price');
-            $table->decimal('time_period');
+            $table->float('price', 3, 2);
+            $table->time('time_period');
             $table->dateTime('start');
             $table->timestamps();
         });

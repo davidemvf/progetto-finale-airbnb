@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ApartmentRequest;
 use App\Apartment;
 use App\Message;
@@ -23,7 +24,7 @@ class userAuthController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -78,9 +79,11 @@ class userAuthController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function myapartmentshow()
     {
-        // 
+        $user = Auth::user();
+        $apartments = Apartment::all();
+        return view('pages.myapartmentsShow', compact('apartments', 'user'));
     }
 
     /**
