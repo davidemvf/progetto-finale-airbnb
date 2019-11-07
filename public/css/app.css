@@ -4348,7 +4348,7 @@ input[type=button].btn-block {
   background-color: #3490dc;
   border: 0;
   border-radius: 1rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -moz-appearance: none;
        appearance: none;
@@ -4356,7 +4356,7 @@ input[type=button].btn-block {
 
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-moz-range-thumb {
-    -webkit-transition: none;
+    -moz-transition: none;
     transition: none;
   }
 }
@@ -4384,14 +4384,14 @@ input[type=button].btn-block {
   background-color: #3490dc;
   border: 0;
   border-radius: 1rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-ms-thumb {
-    -webkit-transition: none;
+    -ms-transition: none;
     transition: none;
   }
 }
@@ -11111,14 +11111,229 @@ a.text-dark:focus {
   list-style: none;
 }
 
+/* REGOLE HEADER ------------------------------------------------------------ */
+
+header {
+  padding: 0 20px;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  border-bottom: 1px solid #efefef;
+  position: fixed;
+  z-index: 999;
+}
+
+header .header-left {
+  width: 20%;
+  float: left;
+  height: 100%;
+}
+
+header .header-left img {
+  height: 40px;
+  margin-top: 15px;
+}
+
+header .header-right {
+  width: 80%;
+  float: left;
+  height: 100%;
+}
+
+header .header-right ul {
+  list-style: none;
+  height: 100%;
+  text-align: right;
+}
+
+header .header-right ul li {
+  display: inline-block;
+  margin: 0 20px;
+  line-height: 70px;
+  height: 100%;
+}
+
+header .header-right ul li a {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  color: #343a40;
+  padding-bottom: 20px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+
+header .header-right ul li a:hover {
+  color: #4E66F8;
+}
+
+header .hamburger-menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  display: none;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  min-width: 100vw;
+  min-height: 20vh;
+  background: #fff;
+}
+
+header .hamburger-menu ul {
+  display: -webkit-box;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+header .hamburger-menu ul a {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  color: #343a40;
+  padding-bottom: 20px;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+
+header .hamburger-menu ul a:focus {
+  color: #4E66F8;
+}
+
+.header-right > a {
+  display: none;
+}
+
+/* Hover arrows */
+
+.prev:hover,
+.next:hover {
+  color: #616161;
+}
+
+/* Regole del contenitore ----------------------------- */
+
+.slider_box {
+  width: 100vw;
+  height: 800px;
+}
+
+/* Regole del Carousel Immagini */
+
+.slider {
+  width: 80%;
+  height: 80%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.slider img {
+  display: none;
+  width: 960px;
+}
+
+.slider img.active {
+  display: inline-block;
+}
+
+/* Arrow */
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 30px;
+  color: #adadad;
+}
+
+.prev {
+  left: -80px;
+}
+
+.next {
+  right: -80px;
+}
+
+/* Dot Navigation */
+
+.dotnav {
+  position: absolute;
+  bottom: -50px;
+}
+
+.dotnav i {
+  padding: 0 10px;
+  color: #adadad;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.dotnav i.active {
+  color: #616161;
+}
+
 /* REGOLE DEL FOOTER -------------------------------------------------------- */
 
 footer {
   /* Barra del Copyright ------------------------------------------------------ */
 }
 
-footer .background {
+footer .box-sb {
   background-color: #e9ecef;
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+footer .box-sb .title-ft {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #343a40;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  letter-spacing: 0.1em;
+}
+
+footer .box-sb .text-ft {
+  font-size: 16px;
+  color: #868e96;
+  padding-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+footer .box-sb img {
+  width: 200px;
+  margin-bottom: 25px;
+}
+
+footer .box-sb ul li .fa {
+  font-size: 16px;
+  margin: 5px 2px;
+  color: #868e96;
+}
+
+footer .box-sb .fa:hover {
+  color: #4E66F8;
+  text-decoration: none;
 }
 
 footer .copyright {
@@ -11131,40 +11346,6 @@ footer .copyright .text-color {
   color: #dee2e6;
   padding-top: 25px;
   font-size: 14px;
-}
-
-.padding-sb {
-  padding-top: 50px;
-  padding-bottom: 60px;
-}
-
-.title-ft {
-  font-size: 22px;
-  font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-}
-
-footer p a {
-  color: #1abc9c;
-}
-
-footer p a:focus,
-footer p a:hover {
-  color: #148F77;
-}
-
-footer .fa {
-  padding: 0 20px 20px 20px;
-  font-size: 20px;
-  margin: 5px 2px;
-  color: #fff;
-}
-
-footer .fa:hover {
-  color: #1abc9c;
-  text-decoration: none;
 }
 
 .container_apartements {
@@ -11180,11 +11361,22 @@ footer .fa:hover {
   padding: 2%;
 }
 
-@media (min-width: 768px) {
-  /* Regole Responsive della Social Bar*/
+@media (max-width: 767px) {
+  .header-right ul {
+    display: none;
+  }
 
-  footer .fa {
-    font-size: 30px;
+  .header-right > a {
+    display: block;
+    height: 100%;
+    line-height: 70px;
+    float: right;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+  }
+
+  .hamburger-menu.active {
+    display: block;
   }
 }
 

@@ -15,10 +15,185 @@
   list-style: none;
 }
 
+/* REGOLE HEADER ------------------------------------------------------------ */
+header {
+  padding: 0 20px;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  border-bottom: 1px solid #efefef;
+  position: fixed;
+  z-index: 999;
+  .header-left {
+    width: 20%;
+    float: left;
+    height: 100%;
+    img {
+      height: 40px;
+      margin-top: 15px;
+    }
+  }
+  .header-right {
+    width: 80%;
+    float: left;
+    height: 100%;
+    ul {
+      list-style: none;
+      height: 100%;
+      text-align: right;
+      li {
+        display: inline-block;
+        margin: 0 20px;
+        line-height: 70px;
+        height: 100%;
+        a {
+          font-size: 16px;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 900;
+          color: #343a40;
+          padding-bottom: 20px;
+          letter-spacing: 0.1em;
+          text-decoration: none;
+        }
+        a:hover {
+          color: #4E66F8;
+        }
+      }
+    }
+  }
+  .hamburger-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: none;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    min-width: 100vw;
+    min-height: 20vh;
+    background: #fff;
+    ul {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      list-style: none;
+      margin-bottom: 20px;
+      a {
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 900;
+        color: #343a40;
+        padding-bottom: 20px;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+      }
+      a:focus {
+        color: #4E66F8;
+      }
+    }
+  }
+}
+.header-right > a {
+  display: none;
+}
+
+/* Hover arrows */
+.prev:hover, .next:hover {
+  color: #616161;
+}
+
+/* Regole del contenitore ----------------------------- */
+.slider_box {
+  width: 100vw;
+  height: 800px;
+  
+}
+
+/* Regole del Carousel Immagini */
+.slider {
+  width:80%;
+  height:80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.slider img {
+  display: none;
+  width: 960px;
+}
+.slider img.active {
+  display: inline-block;
+}
+
+/* Arrow */
+.prev, .next{
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 30px;
+  color: #adadad;
+}
+.prev {
+  left: -80px;
+}
+.next {
+  right: -80px;
+}
+
+/* Dot Navigation */
+.dotnav {
+  position:absolute;
+  bottom: -50px;
+}
+.dotnav i {
+  padding: 0 10px;
+  color: #adadad;
+  cursor: pointer;
+  font-size: 15px;
+}
+.dotnav i.active {
+  color: #616161;
+}
+
 /* REGOLE DEL FOOTER -------------------------------------------------------- */
 footer {
-  .background {
+  .box-sb {
     background-color: #e9ecef;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    .title-ft {
+      font-size: 16px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #343a40;
+      text-transform: uppercase;
+      padding-bottom: 20px;
+      letter-spacing: 0.1em;
+    }
+    .text-ft {
+      font-size: 16px;
+      color: #868e96;
+      padding-bottom: 10px;
+      font-family: 'Poppins', sans-serif;
+    }
+    img {
+      width: 200px;
+      margin-bottom: 25px;
+    }
+    ul li .fa {
+      font-size: 16px;
+      margin: 5px 2px;
+      color: #868e96
+    }
+    .fa:hover {
+      color: #4E66F8;
+      text-decoration: none;
+    }
   }
   /* Barra del Copyright ------------------------------------------------------ */
   .copyright {
@@ -33,33 +208,6 @@ footer {
   }
 }
 
-.padding-sb {
-  padding-top: 50px;
-  padding-bottom: 60px;
-}
-.title-ft {
-  font-size: 22px;
-  font-weight: 700;
-  color: #fff;
-  text-transform: uppercase;
-  padding-bottom: 20px;
-}
-footer p a {
-  color: #1abc9c;
-}
-footer p a:focus, footer p a:hover {
-  color: #148F77;
-}
-footer .fa {
-  padding: 0 20px 20px 20px;
-  font-size: 20px;
-  margin: 5px 2px;
-  color: #fff;
-}
-footer .fa:hover {
-  color: #1abc9c;
-  text-decoration: none;
-}
 
 // Inseriti all'inizio
 .container_apartements{
@@ -75,9 +223,20 @@ footer .fa:hover {
   padding: 2%;
 }
 
-@media (min-width: 768px){
-  /* Regole Responsive della Social Bar*/
-  footer .fa {
-    font-size: 30px;
+@media (max-width: 767px) {
+  .header-right ul {
+      display: none;
+  }
+  .header-right > a {
+      display: block;
+      height: 100%;
+      line-height: 70px;
+      float: right;
+      color: rgba(0,0,0,0.5);
+      font-size: 20px;
+  }
+  .hamburger-menu.active {
+      display: block;
   }
 }
+

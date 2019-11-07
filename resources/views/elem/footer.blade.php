@@ -1,23 +1,76 @@
 <!-- Footer della nostra pagina -->
 <footer>
     <!-- Social Bar -->
-    <section class="background padding-sb">
+    <section class="box-sb">
         <div class="container">
-        <div class="row text-center">
+        <div class="row">
             <div class="col-xs-12 col-md-4">
-                <h3 class="title-ft">Location</h3>
-                <p class="text-fab">2215 John Daniel Drive<br>Clark, MO 65243</p>
+                <img src="img/logo.svg" alt="">
+                <p class="text-ft">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            </div>
+            <div class="col-xs-12 col-md-2">
+                <h3 class="title-ft">Rentals</h3>
+                <ul>
+                    <li class="list-unstyled">
+                        <a href="#" class="text-ft">Apartments</a>
+                    </li>
+                    <li class="list-unstyled">
+                        <a href="#" class="text-ft">Rooms</a>
+                    </li>
+                    <li class="list-unstyled">
+                        <a href="#" class="text-ft">Maps</a>
+                    </li>
+                    <li class="list-unstyled">
+                        <a href="#" class="text-ft">Services</a>
+                    </li>
+                    <li class="list-unstyled">
+                        <a href="#" class="text-ft">Sponsorship</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-md-2">
+                <h3 class="title-ft">Pages</h3>
+                <ul>
+                    <li class="list-unstyled">
+                        <a href="#" class="text-ft">Home</a>
+                    </li>
+                    <li class="list-unstyled">
+                        <a href="#" class="text-ft">Login</a>
+                    </li>
+                    <li class="list-unstyled">
+                        <a href="#" class="text-ft">Register</a>
+                    </li>
+                    <li class="list-unstyled">
+                        <a href="#" class="text-ft">My Account</a>
+                    </li>
+                    <li class="list-unstyled">
+                        <a href="#" class="text-ft">Sponsorship</a>
+                    </li>
+                </ul>
             </div>
             <div class="col-xs-12 col-md-4">
-                <h3 class="title-ft">Around the web</h3>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-linkedin"></a>
-                <a href="#" class="fa fa-dribbble"></a>
-            </div>
-            <div class="col-xs-12 col-md-4">
-                <h3 class="title-ft">About freelancer</h3>
-                <p class="text-fab">Freelance is a free to use, MIT licensed Bootstrap theme created by <a href="https://startbootstrap.com/">Start Bootstrap</a>.</p>
+                <h3 class="title-ft">Daily Offers & Discounts</h3>
+                <p class="text-ft">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    At itaque temporibus.
+                </p>
+                <ul>
+                    <li class="list-inline-item">
+                        <a href="#" class="fa fa-twitter"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="fa fa-facebook"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="fa fa-instagram"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="fa fa-pinterest"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" class="fa fa-vimeo"></a>
+                    </li>
+                </ul>
             </div>
         </div>
         </div>
