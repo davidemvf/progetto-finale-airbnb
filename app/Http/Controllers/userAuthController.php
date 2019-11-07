@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ApartmentRequest;
 use App\Apartment;
+use App\Service;
 
 class userAuthController extends Controller
 {
@@ -30,7 +31,8 @@ class userAuthController extends Controller
      */
     public function create()
     {
-        return view('pages.apartmentCreate');
+        $services = Service::all();
+        return view('pages.apartmentCreate', compact('services'));
     }
 
     /**
@@ -50,7 +52,8 @@ class userAuthController extends Controller
         'toilettes'=> 'required',
         'square_meters'=> 'required',
         'address'=> 'required',
-        'img'=> 'nullable|image|mimes:jpg,jpeg,png,svg|max:2048'
+        'img'=> 'nullable|image|mimes:jpg,jpeg,png,svg|max:2048',
+        'services' => []
         ]);
 
       $name = uniqid(date('HisYmd'));
@@ -63,8 +66,14 @@ class userAuthController extends Controller
       $validated['img'] = $targetFile;
       }
 
-      $validated['user_id'] = $request->user()->id;
-      Apartment::create($validated);
+      $validated['user_id'] = $request->user()-> id;
+      // Apartment::create($validated);
+
+        $newApartment = new Apartment;
+        $newApartment->fill($validated);
+        $newApartment->save();
+        $newApartment->services()->sync($validated['services']);
+
       return redirect('/');
 
     }

@@ -36,6 +36,13 @@
       <input type="file" name="img" accept="image/*">
 
 
+      @foreach ($services as $service)
+        {{-- <label for="{{ $service -> service_category }}">{{ $service -> service_category }}</label>
+        <input type="checkbox" name="{{ $service -> service_category }}[]" value=""> --}}
+        <input type="checkbox" name="services[]" value="{{ $service -> id }}" {{ (isset($data['apartment']) && $data['apartment']->services->firstWhere('id', $service->id) !== null) ? 'checked' : null }}> {{ $service -> service_category }}<br/><br/>
+      @endforeach
+
+
       <button type="submit" name="button">ADD</button>
     </form>
   </div>

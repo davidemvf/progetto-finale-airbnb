@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Apartment;
+use App\Service;
+
 class userSempliceController extends Controller
 {
     /**
@@ -46,6 +48,9 @@ class userSempliceController extends Controller
      */
     public function show($id)
     {
+
+        // $services = Service::where('apartment_id', $id)->first();
+
         $apartment = Apartment::findOrFail($id);
         return view('pages.apartmentShow', compact('apartment'));
     }

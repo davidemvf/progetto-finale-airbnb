@@ -17,6 +17,12 @@
             <li>Numero bagni: {{ $apartment -> toilettes }}</li>
             <li>Mq: {{ $apartment -> square_meters }}</li>
         </ul>
+        <p>Servizi aggiuntivi</p>
+        <ul>
+          @foreach($apartment->services as $service)
+            <li class="services_item">{{$service-> service_category}}</li>
+          @endforeach
+        </ul>
         <div>
             <a href="{{ route('apartment.edit', $apartment -> id) }}">Update</a>
             <a href="{{ route('apartment.destroy', $apartment -> id) }}">Delete</a>
