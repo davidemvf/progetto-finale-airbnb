@@ -100,7 +100,8 @@ class userAuthController extends Controller
     public function edit($id)
     {
         $apartment = Apartment::findOrFail($id);
-        return view('pages.apartmentEdit', compact('apartment'));
+        $services = Service::all();
+        return view('pages.apartmentEdit', compact('apartment', 'services'));
     }
 
     /**
@@ -126,6 +127,8 @@ class userAuthController extends Controller
         }
 
         $apartment -> update($validated);
+        $apartment->services()->sync($validated['services']);
+
         return redirect('/');
     }
 

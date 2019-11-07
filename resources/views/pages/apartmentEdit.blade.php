@@ -35,8 +35,11 @@
       <label for="img">Immagine</label>
       <input type="file" name="img" accept="image/*">
 
-      <label for="wifi">WiFi</label>
-      <input type="checkbox" name="wifi" value="">
+
+      @foreach ($services as $service)
+        
+        <input type="checkbox" name="services[]" value="{{ $service -> id }}" > {{ $service -> service_category }}<br/><br/>
+      @endforeach
 
       <button type="submit" name="button">Update</button>
     </form>
