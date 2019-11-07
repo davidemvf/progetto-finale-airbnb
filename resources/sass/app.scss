@@ -98,66 +98,9 @@ header {
   display: none;
 }
 
-/* Hover arrows */
-.prev:hover, .next:hover {
-  color: #616161;
-}
-
-/* Regole del contenitore ----------------------------- */
-.slider_box {
-  width: 100vw;
-  height: 800px;
-  
-}
-
-/* Regole del Carousel Immagini */
-.slider {
-  width:80%;
-  height:80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-.slider img {
-  display: none;
-  width: 960px;
-}
-.slider img.active {
-  display: inline-block;
-}
-
-/* Arrow */
-.prev, .next{
-  position:absolute;
-  top:50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  font-size: 30px;
-  color: #adadad;
-}
-.prev {
-  left: -80px;
-}
-.next {
-  right: -80px;
-}
-
-/* Dot Navigation */
-.dotnav {
-  position:absolute;
-  bottom: -50px;
-}
-.dotnav i {
-  padding: 0 10px;
-  color: #adadad;
-  cursor: pointer;
-  font-size: 15px;
-}
-.dotnav i.active {
-  color: #616161;
+/* REGOLE DEL SLIDER -------------------------------------------------------- */
+.margin-slider {
+  margin-top: 70px;
 }
 
 /* REGOLE DEL FOOTER -------------------------------------------------------- */

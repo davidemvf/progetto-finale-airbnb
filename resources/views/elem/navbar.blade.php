@@ -1,6 +1,8 @@
 <div class="container">
     <div class="header-left">
-        <img src="img/logo.svg" alt="">
+        <a href="{{ route('home.index') }}">
+            <img src="img/logo.svg" alt="">
+        </a>
     </div>
     <div class="header-right">
         @guest

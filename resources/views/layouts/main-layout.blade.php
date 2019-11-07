@@ -16,9 +16,9 @@
   <body>
     <header>
         @include('elem.navbar')
-        {{-- @include('elem.slider') --}}
     </header>
     <main>
+        @include('elem.slider')
         @yield('content')
     </main>
     @include('elem.footer')
