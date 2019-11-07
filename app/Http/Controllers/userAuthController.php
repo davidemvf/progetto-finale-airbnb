@@ -99,6 +99,7 @@ class userAuthController extends Controller
      */
     public function edit($id)
     {
+        
         $apartment = Apartment::findOrFail($id);
         $services = Service::all();
         return view('pages.apartmentEdit', compact('apartment', 'services'));

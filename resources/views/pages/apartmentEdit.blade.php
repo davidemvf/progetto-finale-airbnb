@@ -37,7 +37,7 @@
 
 
       @foreach ($services as $service)
-        
+
         <input type="checkbox" name="services[]" value="{{ $service -> id }}" > {{ $service -> service_category }}<br/><br/>
       @endforeach
 
