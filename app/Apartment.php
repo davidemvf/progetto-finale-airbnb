@@ -18,11 +18,14 @@ class Apartment extends Model
     'beds',
     'toilettes',
     'square_meters',
+    'city',
+    'prov',
+    'cap',
     'address',
+    'lat',
+    'long',
     'img',
     'user_id'
-    // 'lat',
-    // 'long'
   ];
 
   public function user()

@@ -11321,8 +11321,27 @@ header .hamburger-menu ul a:focus {
   line-height: 1.6;
 }
 
+<<<<<<< HEAD
 .box-searchbar .searchbar button i {
   display: none;
+=======
+/* REGOLE DELLA READ MORE --------------------------------------------------- */
+
+.container .card_box {
+  padding-top: 100px;
+}
+
+.container h3 {
+  color: #4E66F8;
+  padding-top: 20px;
+}
+
+.container i {
+  color: #4E66F8;
+  font-size: 18px;
+  padding-top: 20px;
+  margin-right: 10px;
+>>>>>>> Style sezione apartment Show + correzione bug
 }
 
 /* REGOLE DEL FOOTER -------------------------------------------------------- */

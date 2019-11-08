@@ -29,14 +29,14 @@
       <label for="square_meters">Metri quadrati</label>
       <input type="text" name="square_meters" value="{{ $apartment -> square_meters }}">
 
-      <label for="address">Città</label>
-      <input type="text" name="address" value="{{ $apartment -> city }}">
+      <label for="city">Città</label>
+      <input type="text" name="city" value="{{ $apartment -> city }}">
 
-      <label for="address">Provincia</label>
-      <input type="text" name="address" value="{{ $apartment -> prov }}">
+      <label for="prov">Provincia</label>
+      <input type="text" name="prov" value="{{ $apartment -> prov }}">
 
-      <label for="address">CAP</label>
-      <input type="text" name="address" value="{{ $apartment -> cap }}">
+      <label for="cap">CAP</label>
+      <input type="text" name="cap" value="{{ $apartment -> cap }}">
 
       <label for="address">Indirizzo</label>
       <input type="text" name="address" value="{{ $apartment -> address }}">

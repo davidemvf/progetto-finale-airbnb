@@ -30,11 +30,14 @@ class ApartmentRequest extends FormRequest
           'beds'=> 'required',
           'toilettes'=> 'required',
           'square_meters'=> 'required',
+          'city' => 'required',
+          'prov' => 'required',
+          'cap' => 'required',
           'address'=> 'required',
+          // 'lat'=> 'required',
+          // 'long'=> 'required',
           'img'=> 'nullable|image|mimes:jpg,jpeg,png,svg|max:2048',
           'services' => []
-          // 'lat'=> 'required',
-          // 'long'=> 'required'
         ];
     }
 }

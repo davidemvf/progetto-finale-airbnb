@@ -51,7 +51,12 @@ class userAuthController extends Controller
         'beds'=> 'required',
         'toilettes'=> 'required',
         'square_meters'=> 'required',
+        'city' => 'required',
+        'prov' => 'required',
+        'cap' => 'required',
         'address'=> 'required',
+        // 'lat'=> 'required',
+        // 'long'=> 'required',
         'img'=> 'nullable|image|mimes:jpg,jpeg,png,svg|max:2048',
         'services' => []
         ]);
@@ -99,7 +104,7 @@ class userAuthController extends Controller
      */
     public function edit($id)
     {
-        
+
         $apartment = Apartment::findOrFail($id);
         $services = Service::all();
         return view('pages.apartmentEdit', compact('apartment', 'services'));
