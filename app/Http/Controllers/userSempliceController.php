@@ -50,9 +50,9 @@ class userSempliceController extends Controller
     {
 
         // $services = Service::where('apartment_id', $id)->first();
-
+        
         $apartment = Apartment::findOrFail($id);
-        return view('pages.apartmentShow', compact('apartment'));
+        return view('pages.apartmentShow', compact('apartment', 'user'));
     }
 
     /**

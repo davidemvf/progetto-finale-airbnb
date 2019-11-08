@@ -21,9 +21,12 @@ class CreateApartmentsTable extends Migration
             $table->integer('beds');
             $table->integer('toilettes');
             $table->integer('square_meters');
+            $table->string('city');
+            $table->string('prov');
+            $table->string('CAP');
             $table->string('address');
-            // $table->decimal('lat', 9, 6);
-            // $table->decimal('long', 9, 6);
+            $table->decimal('lat', 9, 6);
+            $table->decimal('long', 9, 6);
             $table->string('img') -> nullable();
             $table->timestamps();
         });

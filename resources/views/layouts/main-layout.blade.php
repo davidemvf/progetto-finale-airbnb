@@ -18,7 +18,6 @@
         @include('elem.navbar')
     </header>
     <main>
-        @include('elem.slider')
         @yield('content')
     </main>
     @include('elem.footer')

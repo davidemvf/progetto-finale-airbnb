@@ -1,6 +1,7 @@
 @extends('layouts.main-layout')
 
 @section('content')
+  @include('elem.slider')
   @guest
     <a href="#">CERCA APPARTAMENTO</a>
   @else

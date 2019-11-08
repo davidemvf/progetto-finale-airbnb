@@ -24,8 +24,12 @@
           @endforeach
         </ul>
         <div>
-            <a href="{{ route('apartment.edit', $apartment -> id) }}">Update</a>
-            <a href="{{ route('apartment.destroy', $apartment -> id) }}">Delete</a>
+            @if ($apartment -> user_id == Auth::id())
+            <div action="{{ route('apartment.show', $apartment -> id) }}">
+                <a href="{{ route('apartment.edit', $apartment -> id) }}">Update</a>
+                <a href="{{ route('apartment.destroy', $apartment -> id) }}">Delete</a>
+            </div>
+            @endif
         </div>
     </div>
 @endsection

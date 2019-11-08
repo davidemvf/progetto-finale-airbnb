@@ -6,7 +6,7 @@
   <div class="container_apartements">
     @foreach ($apartments as $apartment)
       @if ($apartment -> user_id == $user -> id)
-        <div class = 'box_apartement' action="{{ route('apartment.show', $apartment -> id) }}">
+        <div class = 'box_apartement' action="{{ route('myapartment.show', $apartment -> id) }}">
             <h5>{{ $apartment -> title }}</h5>
             <p>{{ $apartment -> address }}</p>
             <p>{{ $apartment -> desc }}</p>
