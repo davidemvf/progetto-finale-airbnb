@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-4">
                 <a href="{{ route('home.index') }}">
-                    <img src="img/logo.svg" alt="">
+                    <img src="{{ asset('img/logo.svg') }}" alt="">
                 </a>
                 <p class="text-ft">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
             </div>

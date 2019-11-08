@@ -9,7 +9,8 @@
     </div>
     <div action="{{ route('apartment.show', $apartment -> id) }}">
         <h5>{{ $apartment -> title }}</h5>
-        <p>{{ $apartment -> address }}</p>
+        <p>{{ $apartment -> city }} - {{ $apartment -> prov }}</p>
+        <p>{{ $apartment -> address }} - <p>{{ $apartment -> cap }}</p></p>
         <p>{{ $apartment -> desc }}</p>
         <ul>
             <li>Numero camere: {{ $apartment -> rooms }}</li>

@@ -29,6 +29,15 @@
       <label for="square_meters">Metri quadrati</label>
       <input type="text" name="square_meters" value="">
 
+      <label for="address">Città</label>
+      <input type="text" name="address" value="">
+
+      <label for="address">Provincia</label>
+      <input type="text" name="address" value="">
+
+      <label for="address">CAP</label>
+      <input type="text" name="address" value="">
+
       <label for="address">Indirizzo</label>
       <input type="text" name="address" value="">
 
