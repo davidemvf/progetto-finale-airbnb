@@ -15,7 +15,7 @@
 
     <div action="{{ route('apartment.show', $apartment -> id) }}">
 
-      <h3>{{ $apartment -> title }}</h3>
+      <h3>{{ $apartment -> title }} ciao</h3>
 
       <p> <i class="fa fa-map-marker" aria-hidden="true"></i> {{ $apartment -> city }} - {{ $apartment -> prov }}</p>
       <p>{{ $apartment -> address }} - {{ $apartment -> cap }}</p>
