@@ -1,7 +1,7 @@
 @extends('layouts.main-layout')
 
 @section('content')
-  <div class="container">
+  <div class="container apt_box">
     {{-- <div>
       <a href="{{ route('home.index') }}">HOME PAGE</a>
     </div> --}}
@@ -15,7 +15,7 @@
 
     <div action="{{ route('apartment.show', $apartment -> id) }}">
 
-      <h3>{{ $apartment -> title }} ciao</h3>
+      <h3>{{ $apartment -> title }}</h3>
 
       <p> <i class="fa fa-map-marker" aria-hidden="true"></i> {{ $apartment -> city }} - {{ $apartment -> prov }}</p>
       <p>{{ $apartment -> address }} - {{ $apartment -> cap }}</p>
