@@ -9,7 +9,10 @@
                         <div class="searchbar">
                             <input type="search" id="site-search" name="s" aria-label="Search through site content">
                             <i class="fa fa-crosshairs"></i>
-                            <button type="submit">Search</button>
+                            <button type="submit">
+                                Search
+                                <i class="fas fa-search"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
