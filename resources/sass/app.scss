@@ -268,6 +268,46 @@ header {
 
 }
 
+/* REGOLE DELLA CREATE --------------------------------------------------- */
+.apt_create_box{
+
+  padding-top: 100px;
+
+  form{
+
+    .number_label{
+      margin-top: 30px;
+      input{
+        width: 70px;
+      }
+    }
+
+    .text_label{
+      margin: 30px 0;
+    }
+
+    .address_label{
+      margin: 30px 0;
+      input{
+        width: 200px;
+      }
+    }
+
+    input, textarea{
+      border-radius: 10px;
+      border: 1px solid #1131f6;
+      padding: 5px 10px;
+    }
+    label{
+      margin-top:10px;
+    }
+    #label_img_apt_create{
+      border: none;
+    }
+  }
+
+}
+
 
 
 /* REGOLE DEL FOOTER -------------------------------------------------------- */

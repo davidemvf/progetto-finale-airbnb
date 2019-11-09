@@ -11394,6 +11394,47 @@ header .hamburger-menu ul a:focus {
   margin-top: 10px;
 }
 
+/* REGOLE DELLA CREATE --------------------------------------------------- */
+
+.apt_create_box {
+  padding-top: 100px;
+}
+
+.apt_create_box form .number_label {
+  margin-top: 30px;
+}
+
+.apt_create_box form .number_label input {
+  width: 70px;
+}
+
+.apt_create_box form .text_label {
+  margin: 30px 0;
+}
+
+.apt_create_box form .address_label {
+  margin: 30px 0;
+}
+
+.apt_create_box form .address_label input {
+  width: 200px;
+}
+
+.apt_create_box form input,
+.apt_create_box form textarea {
+  border-radius: 10px;
+  border: 1px solid #1131f6;
+  padding: 5px 10px;
+}
+
+.apt_create_box form label {
+  margin-top: 10px;
+}
+
+.apt_create_box form #label_img_apt_create {
+  border: none;
+}
+
 /* REGOLE DEL FOOTER -------------------------------------------------------- */
 
 footer {

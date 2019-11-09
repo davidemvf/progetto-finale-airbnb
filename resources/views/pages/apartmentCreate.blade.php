@@ -1,48 +1,65 @@
 @extends('layouts.main-layout')
 
 @section('content')
-  <h1>Aggiungi un nuovo appartamento</h1>
-  <a href="{{ route('home.index') }}">HOME</a>
-  <div class="add_apartment">
-    <form action="{{ route('apartment.store') }}" method="post"
+
+  <div class="container apt_create_box">
+
+    <h1>Aggiungi un nuovo appartamento</h1>
+    <a href="{{ route('home.index') }}">HOME</a>
+    <div class="add_apartment">
+      <form action="{{ route('apartment.store') }}" method="post"
       accept-charset="UTF-8"
       enctype="multipart/form-data">
 
       @csrf
       @method('POST')
 
-      <label for="title">Titolo</label>
-      <input type="text" name="title" value="">
+      <label for="title">Titolo</label> <br>
+      <input type="text" name="title" value=""> <br>
 
-      <label for="desc">Descrizione</label>
-      <input type="text" name="desc" value="">
+      <label for="desc">Descrizione</label> <br>
+      <textarea name="desc" rows="8" cols="40" placeholder="inserisci descrizione"></textarea> <br>
 
-      <label for="rooms">Numero stanze</label>
-      <input type="text" name="rooms" value="">
+      <div class="number_label">
 
-      <label for="beds">Numero letti</label>
-      <input type="text" name="beds" value="">
+        <label class="list-inline-item" for="rooms">Numero stanze</label>
+        <input class="list-inline-item" type="number" name="rooms" value="">
 
-      <label for="toilettes">Numero Bagni</label>
-      <input type="text" name="toilettes" value="">
+        <label class="list-inline-item" for="beds">Numero letti</label>
+        <input class="list-inline-item" type="number" name="beds" value="">
 
-      <label for="square_meters">Metri quadrati</label>
-      <input type="text" name="square_meters" value="">
+        <label class="list-inline-item" for="toilettes">Numero Bagni</label>
+        <input class="list-inline-item" type="number" name="toilettes" value="">
 
-      <label for="city">Città</label>
-      <input type="text" name="city" value="">
+        <label class="list-inline-item" for="square_meters">Metri quadrati</label>
+        <input class="list-inline-item" type="number" name="square_meters" value=""> <br>
 
-      <label for="prov">Provincia</label>
-      <input type="text" name="prov" value="">
+      </div>
 
-      <label for="cap">CAP</label>
-      <input type="text" name="cap" value="">
+      <div class="text_label">
 
-      <label for="address">Indirizzo</label>
-      <input type="text" name="address" value="">
+        <label class="list-inline-item" for="city">Città</label>
+        <input class="list-inline-item" type="text" name="city" value="">
 
-      <label for="img">Immagine</label>
-      <input type="file" name="img" accept="image/*">
+        <label class="list-inline-item" for="prov">Provincia</label>
+        <input class="list-inline-item" type="text" name="prov" value="">
+
+        <label class="list-inline-item" for="cap">CAP</label>
+        <input class="list-inline-item" type="text" name="cap" value=""> <br>
+
+        <div class="address_label">
+
+          <label class="list-inline-item" for="address">Indirizzo</label>
+          <input class="list-inline-item" type="text" name="address" value="">
+          
+        </div>
+
+
+      </div>
+
+
+      <label for="img">Immagine</label> <br>
+      <input id="label_img_apt_create" type="file" name="img" accept="image/*"> <br>
 
 
       @foreach ($services as $service)
@@ -55,4 +72,8 @@
       <button type="submit" name="button">ADD</button>
     </form>
   </div>
+
+  </div>
+
+
 @endsection
