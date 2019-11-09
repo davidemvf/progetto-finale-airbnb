@@ -2,10 +2,13 @@
 
 @section('content')
 
-  <div class="container apt_create_box">
+ <div class="container apt_create_box">
 
-    <h1>Aggiungi un nuovo appartamento</h1>
-    <a href="{{ route('home.index') }}">HOME</a>
+
+  <h1>Aggiungi un nuovo appartamento</h1>
+
+    {{-- <a href="{{ route('home.index') }}">HOME</a> --}}
+
     <div class="add_apartment">
       <form action="{{ route('apartment.store') }}" method="post"
       accept-charset="UTF-8"
@@ -14,52 +17,70 @@
       @csrf
       @method('POST')
 
-      <label for="title">Titolo</label> <br>
-      <input type="text" name="title" value=""> <br>
+      <div class="form-group">
+        <label for="title">Titolo</label>
+        <input type="text" name="title" class="form-control" id="inputAddress" placeholder="" value="">
+      </div>
 
-      <label for="desc">Descrizione</label> <br>
-      <textarea name="desc" rows="8" cols="40" placeholder="inserisci descrizione"></textarea> <br>
+      <div class="form-group">
+        <label for="desc">Descrizione</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1"  name="desc" rows="5"  placeholder="inserisci descrizione"></textarea>
+      </div>
 
       <div class="number_label">
 
-        <label class="list-inline-item" for="rooms">Numero stanze</label>
-        <input class="list-inline-item" type="number" name="rooms" value="">
+        <div class="form-row">
 
-        <label class="list-inline-item" for="beds">Numero letti</label>
-        <input class="list-inline-item" type="number" name="beds" value="">
+          <div class="form-group col-md-3">
+            <label for="rooms">Numero stanze</label>
+            <input type="number" class="form-control" name="rooms" value="">
+          </div>
+          <div class="form-group col-md-3">
+            <label  for="beds">Numero letti</label>
+            <input type="number" class="form-control" name="beds" value="">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="toilettes">Numero Bagni</label>
+            <input type="number" class="form-control" name="toilettes" value="">
+          </div>
+          <div class="form-group col-md-3">
+            <label for="square_meters">Metri quadrati</label>
+            <input type="number" class="form-control" name="square_meters" value="">
+          </div>
 
-        <label class="list-inline-item" for="toilettes">Numero Bagni</label>
-        <input class="list-inline-item" type="number" name="toilettes" value="">
-
-        <label class="list-inline-item" for="square_meters">Metri quadrati</label>
-        <input class="list-inline-item" type="number" name="square_meters" value=""> <br>
+        </div>
 
       </div>
 
       <div class="text_label">
 
-        <label class="list-inline-item" for="city">Città</label>
-        <input class="list-inline-item" type="text" name="city" value="">
 
-        <label class="list-inline-item" for="prov">Provincia</label>
-        <input class="list-inline-item" type="text" name="prov" value="">
+        <div class="form-row">
 
-        <label class="list-inline-item" for="cap">CAP</label>
-        <input class="list-inline-item" type="text" name="cap" value=""> <br>
+          <div class="form-group col-md-3">
+            <label for="city">Città</label>
+            <input type="text" class="form-control" name="city" value="">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="prov">Provincia</label>
+            <input type="text" class="form-control" name="prov" value="">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="cap">CAP</label>
+            <input type="text" class="form-control" name="cap" value="">
+          </div>
+          <div class="form-group col-md-5">
+            <label for="address">Indirizzo</label>
+            <input type="text" class="form-control" name="address" value="">
+          </div>
 
-        <div class="address_label">
-
-          <label class="list-inline-item" for="address">Indirizzo</label>
-          <input class="list-inline-item" type="text" name="address" value="">
-          
         </div>
 
+       <div class="immagini_create">
+         <label for="img">Immagine</label> <br>
+         <input id="label_img_apt_create" type="file" name="img" accept="image/*"> 
+       </div>
 
-      </div>
-
-
-      <label for="img">Immagine</label> <br>
-      <input id="label_img_apt_create" type="file" name="img" accept="image/*"> <br>
 
 
       @foreach ($services as $service)
@@ -69,7 +90,8 @@
       @endforeach
 
 
-      <button type="submit" name="button">ADD</button>
+      <button class="button_style" type="submit" name="button">CREA</button>
+
     </form>
   </div>
 
