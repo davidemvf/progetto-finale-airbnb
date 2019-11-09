@@ -271,8 +271,8 @@ header {
 
 }
 
-/* REGOLE DELLA CREATE --------------------------------------------------- */
-.apt_create_box{
+/* REGOLE DELLA CREATE e EDIT--------------------------------------------------- */
+.apt_create_box, .apt_edit_box{
 
   padding-top: 100px;
   font-family: "Poppins", sans-serif;
@@ -283,7 +283,6 @@ header {
     font-size: 40px;
     font-weight: 800;
     color:#4E66F8;
-    // padding-top: 20px;
   }
 
   form{
@@ -292,12 +291,12 @@ header {
       border-radius: 10px;
       border: 1px solid #1131f6;
     }
-    #label_img_apt_create{
+    .input_img_apt{
       border: none;
     }
   }
 
-  .immagini_create{
+  .immagini_margin{
     margin-bottom: 20px;
   }
 

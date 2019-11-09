@@ -11394,15 +11394,17 @@ header .hamburger-menu ul a:focus {
   margin-top: 10px;
 }
 
-/* REGOLE DELLA CREATE --------------------------------------------------- */
+/* REGOLE DELLA CREATE e EDIT--------------------------------------------------- */
 
-.apt_create_box {
+.apt_create_box,
+.apt_edit_box {
   padding-top: 100px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
 }
 
-.apt_create_box h3 {
+.apt_create_box h3,
+.apt_edit_box h3 {
   margin: 35px 0;
   font-size: 40px;
   font-weight: 800;
@@ -11410,16 +11412,20 @@ header .hamburger-menu ul a:focus {
 }
 
 .apt_create_box form input,
-.apt_create_box form textarea {
+.apt_create_box form textarea,
+.apt_edit_box form input,
+.apt_edit_box form textarea {
   border-radius: 10px;
   border: 1px solid #1131f6;
 }
 
-.apt_create_box form #label_img_apt_create {
+.apt_create_box form .input_img_apt,
+.apt_edit_box form .input_img_apt {
   border: none;
 }
 
-.apt_create_box .immagini_create {
+.apt_create_box .immagini_margin,
+.apt_edit_box .immagini_margin {
   margin-bottom: 20px;
 }
 

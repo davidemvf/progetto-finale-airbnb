@@ -6,7 +6,7 @@
 
     <a class="button_style" href="{{ route('home.index') }}">HOME</a>
 
-  <h3>Aggiungi un nuovo appartamento</h3>
+   <h3>Aggiungi un nuovo appartamento</h3>
 
 
 
@@ -20,7 +20,7 @@
 
       <div class="form-group">
         <label for="title">Titolo</label>
-        <input type="text" name="title" class="form-control" id="inputAddress" placeholder="" value="">
+        <input type="text" name="title" class="form-control" placeholder="" value="">
       </div>
 
       <div class="form-group">
@@ -55,7 +55,6 @@
 
       <div class="text_label">
 
-
         <div class="form-row">
 
           <div class="form-group col-md-3">
@@ -77,9 +76,9 @@
 
         </div>
 
-       <div class="immagini_create">
+       <div class="immagini_margin">
          <label for="img">Immagine</label> <br>
-         <input id="label_img_apt_create" type="file" name="img" accept="image/*">
+         <input class="input_img_apt" type="file" name="img" accept="image/*">
        </div>
 
 

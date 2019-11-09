@@ -1,56 +1,100 @@
 @extends('layouts.main-layout')
 
 @section('content')
-  <h1>Modifica appartamento</h1>
-  <a href="{{ route('home.index') }}">HOME</a>
-  <div class="add_apartment">
-    <form action="{{ route('apartment.update', $apartment -> id) }}" method="post"
-      accept-charset="UTF-8"
-      enctype="multipart/form-data">
 
-      @csrf
-      @method('POST')
+  <div class="container apt_edit_box">
 
-      <label for="title">Titolo</label>
-      <input type="text" name="title" value="{{ $apartment -> title }}">
+    <a class="button_style" href="{{ route('home.index') }}">HOME</a>
 
-      <label for="desc">Descrizione</label>
-      <input type="text" name="desc" value="{{ $apartment -> desc }}">
+    <h3>Modifica appartamento</h3>
 
-      <label for="rooms">Numero stanze</label>
-      <input type="text" name="rooms" value="{{ $apartment -> rooms }}">
+    <div class="add_apartment">
+      <form action="{{ route('apartment.update', $apartment -> id) }}" method="post"
+        accept-charset="UTF-8"
+        enctype="multipart/form-data">
 
-      <label for="beds">Numero letti</label>
-      <input type="text" name="beds" value="{{ $apartment -> beds }}">
+        @csrf
+        @method('POST')
 
-      <label for="toilettes">Numero Bagni</label>
-      <input type="text" name="toilettes" value="{{ $apartment -> toilettes }}">
+        <div class="form-group">
+          <label for="title">Titolo</label>
+          <input type="text" name="title" class="form-control" placeholder="" value="{{ $apartment -> title }}">
+        </div>
 
-      <label for="square_meters">Metri quadrati</label>
-      <input type="text" name="square_meters" value="{{ $apartment -> square_meters }}">
+        <div class="form-group">
+          <label for="desc">Descrizione</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1"  name="desc" rows="5"  placeholder="inserisci descrizione" value="{{ $apartment -> desc }}"></textarea>
+        </div>
 
-      <label for="city">Città</label>
-      <input type="text" name="city" value="{{ $apartment -> city }}">
+        <div class="number_label">
 
-      <label for="prov">Provincia</label>
-      <input type="text" name="prov" value="{{ $apartment -> prov }}">
+          <div class="form-row">
 
-      <label for="cap">CAP</label>
-      <input type="text" name="cap" value="{{ $apartment -> cap }}">
+            <div class="form-group col-md-3">
+              <label for="rooms">Numero stanze</label>
+              <input type="text" name="rooms" class="form-control" placeholder="" value="{{ $apartment -> rooms }}">
+            </div>
 
-      <label for="address">Indirizzo</label>
-      <input type="text" name="address" value="{{ $apartment -> address }}">
+            <div class="form-group col-md-3">
+              <label for="beds">Numero letti</label>
+              <input type="text" name="beds" class="form-control" placeholder="" value="{{ $apartment -> beds }}">
+            </div>
 
-      <label for="img">Immagine</label>
-      <input type="file" name="img" accept="image/*">
+            <div class="form-group col-md-3">
+              <label for="toilettes">Numero Bagni</label>
+              <input type="text" name="toilettes" class="form-control" placeholder="" value="{{ $apartment -> toilettes }}">
+            </div>
+
+            <div class="form-group col-md-3">
+              <label for="square_meters">Metri quadrati</label>
+              <input type="text" name="square_meters" class="form-control" placeholder="" value="{{ $apartment -> square_meters }}">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text_label">
+          <div class="form-row">
+
+            <div class="form-group col-md-3">
+              <label for="city">Città</label>
+              <input type="text" name="city" class="form-control" placeholder="" value="{{ $apartment -> city }}">
+            </div>
+
+            <div class="form-group col-md-2">
+              <label for="prov">Provincia</label>
+              <input type="text" name="prov" class="form-control" placeholder="" value="{{ $apartment -> prov }}">
+            </div>
+
+            <div class="form-group col-md-2">
+              <label for="cap">CAP</label>
+              <input type="text" name="cap" class="form-control" placeholder="" value="{{ $apartment -> cap }}">
+            </div>
+
+            <div class="form-group col-md-5">
+              <label for="address">Indirizzo</label>
+              <input type="text" name="address" class="form-control" placeholder="" value="{{ $apartment -> address }}">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="immagini_margin">
+          <label  for="img">Immagine</label> <br>
+          <input class="input_img_apt" type="file" name="img" accept="image/*"> <br>
+        </div>
 
 
-      @foreach ($services as $service)
 
-        <input type="checkbox" name="services[]" value="{{ $service -> id }}" > {{ $service -> service_category }}<br/><br/>
-      @endforeach
+        @foreach ($services as $service)
 
-      <button type="submit" name="button">Update</button>
-    </form>
+          <input type="checkbox" name="services[]" value="{{ $service -> id }}" > {{ $service -> service_category }}<br/><br/>
+        @endforeach
+
+        <button class="button_style" type="submit" name="button">Update</button>
+      </form>
+    </div>
+
   </div>
+
 @endsection
