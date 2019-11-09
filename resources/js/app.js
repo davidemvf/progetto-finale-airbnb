@@ -11,13 +11,21 @@ const app = new Vue({
 
 
 function init() {
-    navBar();
+  navBar();
+  writeMessage();
 }
 
 function navBar() {
-    $( ".header-right > a" ).click(function() {
-        $(".hamburger-menu").toggleClass( "active" );
-    });
+  $( ".header-right > a" ).click(function() {
+    $(".hamburger-menu").toggleClass("active");
+  });
 }
-    
+
+function writeMessage() {
+  $("#write_msg").click(function() {
+    $(".message-form").toggleClass("active");
+  });
+}
+
+
 $(document).ready(init);

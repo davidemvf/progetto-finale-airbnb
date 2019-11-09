@@ -10,7 +10,7 @@
       <label for="lastname">Cognome</label> <br>
       <input type="text" name="lastname" value=""> <br>
 
-      <label for="email">Inserisci il tuo indirizzo email</label>
+      <label for="email">Email</label> <br>
       <input type="text" name="email" value=""> <br>
     @else
       <label for="firstname">Nome</label> <br>

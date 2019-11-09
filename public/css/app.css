@@ -11381,6 +11381,7 @@ header .hamburger-menu ul a:focus {
 
 .apt_box .message-form {
   margin-top: 20px;
+  display: none;
 }
 
 .apt_box .message-form form input,
@@ -11392,6 +11393,10 @@ header .hamburger-menu ul a:focus {
 
 .apt_box .message-form form label {
   margin-top: 10px;
+}
+
+.apt_box .message-form.active {
+  display: block;
 }
 
 /* REGOLE DELLA CREATE e EDIT--------------------------------------------------- */

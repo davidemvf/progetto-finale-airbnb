@@ -219,15 +219,14 @@ header {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
 
-  #city_p{
+  #city_p {
     font-size: 25px;
     font-weight: 900;
   }
 
-  i{
+  i {
     color: #4E66F8;
   }
-
 
   .card_box {
     padding-top: 100px;
@@ -242,12 +241,12 @@ header {
 
   .info_apt_box{
 
-    ul{
-
-      li{
+    ul {
+      li {
         font-weight: 800;
       }
     }
+
     i {
       font-size: 18px;
       padding-top: 20px;
@@ -257,23 +256,29 @@ header {
 
   .message-form{
     margin-top: 20px;
-    form{
+    display: none;
+
+    form {
       input, textarea{
         border-radius: 10px;
         border: 1px solid #1131f6;
         padding: 5px 10px;
       }
-      label{
+
+      label {
         margin-top:10px;
       }
     }
   }
 
+  .message-form.active {
+    display: block;
+  }
+
 }
 
 /* REGOLE DELLA CREATE e EDIT--------------------------------------------------- */
-.apt_create_box, .apt_edit_box{
-
+.apt_create_box, .apt_edit_box {
   padding-top: 100px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -285,18 +290,18 @@ header {
     color:#4E66F8;
   }
 
-  form{
-
-    input, textarea{
+  form {
+    input, textarea {
       border-radius: 10px;
       border: 1px solid #1131f6;
     }
-    .input_img_apt{
+
+    .input_img_apt {
       border: none;
     }
   }
 
-  .immagini_margin{
+  .immagini_margin {
     margin-bottom: 20px;
   }
 
