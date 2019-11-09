@@ -4348,7 +4348,7 @@ input[type=button].btn-block {
   background-color: #3490dc;
   border: 0;
   border-radius: 1rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -moz-appearance: none;
        appearance: none;
@@ -4356,7 +4356,7 @@ input[type=button].btn-block {
 
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-moz-range-thumb {
-    -webkit-transition: none;
+    -moz-transition: none;
     transition: none;
   }
 }
@@ -4384,14 +4384,14 @@ input[type=button].btn-block {
   background-color: #3490dc;
   border: 0;
   border-radius: 1rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-ms-thumb {
-    -webkit-transition: none;
+    -ms-transition: none;
     transition: none;
   }
 }
@@ -11327,20 +11327,71 @@ header .hamburger-menu ul a:focus {
 
 /* REGOLE DELLA READ MORE --------------------------------------------------- */
 
+.apt_box {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.apt_box #city_p {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.apt_box i {
+  color: #4E66F8;
+}
+
 .apt_box .card_box {
   padding-top: 100px;
 }
 
 .apt_box h3 {
+  font-size: 40px;
+  font-weight: 800;
   color: #4E66F8;
   padding-top: 20px;
 }
 
-.apt_box i {
-  color: #4E66F8;
+.apt_box .info_apt_box ul li {
+  font-weight: 800;
+}
+
+.apt_box .info_apt_box i {
   font-size: 18px;
   padding-top: 20px;
   margin-right: 10px;
+}
+
+.apt_box .button_style {
+  color: #fff;
+  background-color: #1d3cf6;
+  border-color: #1131f6;
+  border-radius: 10rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 0.525rem 0.75rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 20px 0px;
+}
+
+.apt_box .message-form {
+  margin-top: 20px;
+}
+
+.apt_box .message-form form input,
+.apt_box .message-form form textarea {
+  border-radius: 10px;
+  border: 1px solid #1131f6;
+  padding: 5px 10px;
+}
+
+.apt_box .message-form form label {
+  margin-top: 10px;
 }
 
 /* REGOLE DEL FOOTER -------------------------------------------------------- */

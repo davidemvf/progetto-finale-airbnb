@@ -4,28 +4,29 @@
     @method('POST')
 
     @guest
-      <label for="firstname">Nome</label>
-      <input type="text" name="firstname" value="">
+      <label for="firstname">Nome</label> <br>
+      <input type="text" name="firstname" value=""> <br>
 
-      <label for="lastname">Cognome</label>
-      <input type="text" name="lastname" value="">
+      <label for="lastname">Cognome</label> <br>
+      <input type="text" name="lastname" value=""> <br>
 
       <label for="email">Inserisci il tuo indirizzo email</label>
-      <input type="text" name="email" value="">
+      <input type="text" name="email" value=""> <br>
     @else
-      <label for="firstname">Nome</label>
-      <input type="text" name="firstname" value="{{ Auth::user() -> firstname }}">
+      <label for="firstname">Nome</label> <br>
+      <input type="text" name="firstname" value="{{ Auth::user() -> firstname }}"> <br>
 
-      <label for="lastname">Cognome</label>
-      <input type="text" name="lastname" value="{{ Auth::user() -> lastname }}">
+      <label for="lastname">Cognome</label> <br>
+      <input type="text" name="lastname" value="{{ Auth::user() -> lastname }}"> <br>
 
-      <label for="email">Email</label>
-      <input type="text" name="email" value="{{ Auth::user() -> email }}">
+      <label for="email">Email</label> <br>
+      <input type="text" name="email" value="{{ Auth::user() -> email }}"> <br>
     @endguest
 
+    <label for="content">Messaggio</label> <br>
 
-    <input type="text" name="content" placeholder="Scrivi il messaggio..." value="">
+    <textarea name="content" rows="8" cols="40" placeholder="scrivi un messaggio"></textarea> <br>
 
-    <button type="submit" name="button">Invia</button>
+    <button class="button_style" type="submit" name="button">Invia</button>
   </form>
 </div>
