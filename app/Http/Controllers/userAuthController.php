@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\ApartmentRequest;
 use App\Apartment;
 use App\Service;
+use App\Message;
 
 class userAuthController extends Controller
 {
@@ -94,6 +96,21 @@ class userAuthController extends Controller
         $user = Auth::user();
         $apartments = Apartment::all();
         return view('pages.myapartmentsShow', compact('apartments', 'user'));
+    }
+
+    public function messagesShow()
+    {
+
+        $userId = Auth::user() -> id;
+
+        $messages = DB::table('apartments')
+            ->join('messages', 'apartments.id', '=', 'messages.apartment_id')
+            ->where('user_id', '=', $userId)
+            ->orderBy('messages.created_at', 'DESC')
+            ->get();
+            // dd($messages);
+            
+        return view('pages.myMessages', compact('messages'));
     }
 
     /**

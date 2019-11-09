@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Apartment;
 use App\Service;
+use App\Message;
 
 class userSempliceController extends Controller
 {
@@ -35,9 +36,29 @@ class userSempliceController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function messageStore(Request $request, $id)
     {
-        //
+        $validatedData = $request -> validate([
+          'firstname' => 'required',
+          'lastname' => 'nullable',
+          'content' => 'required',
+          'email' => 'required'
+        ]);
+
+        // $apartment = Apartment::findOrFail($id);
+        // $message = Message::create($validatedData);
+        $validatedData['apartment_id'] = $id;
+        // dd($apartment);
+        $newMessage = new Message;
+        $newMessage->fill($validatedData);
+        // $newMessage->save();
+        $newMessage = Message::create($validatedData);
+
+        // $request->session()->flash('status', 'Il messaggio è stato inviato correttamente');
+        // $request->session()->flash('error', 'Si è verificato un errore. Inviare un nuovo messaggio');
+
+        return redirect('apartment/' . $id);
+        // return back()->withInput([]);
     }
 
     /**
@@ -50,7 +71,7 @@ class userSempliceController extends Controller
     {
 
         // $services = Service::where('apartment_id', $id)->first();
-        
+
         $apartment = Apartment::findOrFail($id);
         return view('pages.apartmentShow', compact('apartment', 'user'));
     }

@@ -7,6 +7,7 @@
   @else
     <a href="{{ route('apartment.create') }}">NUOVO APPARTAMENTO</a>
     <a href="{{ route('myapartment.show') }}">I MIEI APPARTAMENTI</a>
+    <a href="{{ route('messages.show') }}">MESSAGGI RICEVUTI</a>
   @endguest
 
   <div class="container_apartements">
