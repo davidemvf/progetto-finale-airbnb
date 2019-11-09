@@ -4,10 +4,11 @@
 
  <div class="container apt_create_box">
 
+    <a class="button_style" href="{{ route('home.index') }}">HOME</a>
 
-  <h1>Aggiungi un nuovo appartamento</h1>
+  <h3>Aggiungi un nuovo appartamento</h3>
 
-    {{-- <a href="{{ route('home.index') }}">HOME</a> --}}
+
 
     <div class="add_apartment">
       <form action="{{ route('apartment.store') }}" method="post"
@@ -78,7 +79,7 @@
 
        <div class="immagini_create">
          <label for="img">Immagine</label> <br>
-         <input id="label_img_apt_create" type="file" name="img" accept="image/*"> 
+         <input id="label_img_apt_create" type="file" name="img" accept="image/*">
        </div>
 
 

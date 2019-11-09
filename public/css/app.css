@@ -11398,6 +11398,15 @@ header .hamburger-menu ul a:focus {
 
 .apt_create_box {
   padding-top: 100px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.apt_create_box h3 {
+  margin: 35px 0;
+  font-size: 40px;
+  font-weight: 800;
+  color: #4E66F8;
 }
 
 .apt_create_box form input,
