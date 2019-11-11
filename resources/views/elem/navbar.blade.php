@@ -16,7 +16,13 @@
         </ul> 
         @else
         <ul>
-            <li>
+            <li class="list-inline-item">
+                <a href="{{ route('apartment.create') }}">Create property</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="{{ route('myapartment.show') }}">My property</a>
+            </li>
+            <li class="list-inline-item">
                 <a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
@@ -43,7 +49,13 @@
         </ul> 
         @else
         <ul>
-            <li>
+            <li class="list-inline-item">
+                <a href="{{ route('apartment.create') }}">Create property</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="{{ route('myapartment.show') }}">My property</a>
+            </li>
+            <li class="list-inline-item">
                 <a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">

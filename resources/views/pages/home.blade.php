@@ -2,27 +2,43 @@
 
 @section('content')
   @include('elem.slider')
-  @guest
-    <a href="#">CERCA APPARTAMENTO</a>
-  @else
-    <a href="{{ route('apartment.create') }}">NUOVO APPARTAMENTO</a>
-    <a href="{{ route('myapartment.show') }}">I MIEI APPARTAMENTI</a>
-    <a href="{{ route('messages.show') }}">MESSAGGI RICEVUTI</a>
-  @endguest
-
-  <div class="container_apartements">
-
-    @foreach ($apartments as $apartment)
-      <div class="box_apartement">
-
-        <h3>{{$apartment -> title}}</h3>
-        <p>{{$apartment -> desc}}</p>
-        <img src="/img/{{ $apartment -> img }}"  width="50"alt="">
-        <a href="{{ route('apartment.show', $apartment -> id) }}">READ MORE</a>
+  <div class="corpo">
+    <div class="container">
+      <div class="col-xs-12 testo-evid">
+        <p>Hurry up, these are expiring soon.</p>
+        <h2>In Evidenza</h2>
       </div>
-
-    @endforeach
-
+      <div class="row">
+        @foreach ($apartments as $apartment)
+          <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class="box_apartement">
+              <a href="{{ route('apartment.show', $apartment -> id) }}">
+                <img src="/img/{{ $apartment -> img }}" alt="Anteprima">
+              </a>
+              <div class="anteprima">
+                <div class="city">
+                  <i class="fa fa-map-marker"></i>
+                  <p>{{$apartment -> city}}</p> 
+                </div>
+                <div class="title">
+                  <a href="{{ route('apartment.show', $apartment -> id) }}">
+                    <h3>{{$apartment -> title}}</h3> 
+                  </a>
+                </div>
+                <div class="desc">
+                  <p>{{ trim(substr($apartment -> desc, 0, 110)) . "..." }}</p>
+                </div>
+                <div class="read-more">
+                  <a href="{{ route('apartment.show', $apartment -> id) }}">
+                    READ MORE
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        @endforeach
+      </div>
+    </div>
   </div>
 
 @endsection
