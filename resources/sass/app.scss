@@ -15,6 +15,23 @@
   list-style: none;
 }
 
+.button_style {
+  color:#fff;
+  background-color:#1d3cf6;
+  border-color: #1131f6;
+  border-radius: 10rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: 0.525rem 0.75rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 20px 0px;
+}
+
 /* REGOLE HEADER ------------------------------------------------------------ */
 header {
   padding: 0 20px;
@@ -281,22 +298,95 @@ header {
 /* REGOLE DELLA READ MORE --------------------------------------------------- */
 
 .apt_box {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+
+  #city_p {
+    font-size: 25px;
+    font-weight: 900;
+  }
+
+  i {
+    color: #4E66F8;
+  }
 
   .card_box {
     padding-top: 100px;
   }
 
   h3 {
+    font-size: 40px;
+    font-weight: 800;
     color: #4E66F8;
     padding-top: 20px;
   }
 
-  i {
-    color: #4E66F8;
-    font-size: 18px;
-    padding-top: 20px;
-    margin-right: 10px;
+  .info_apt_box{
+
+    ul {
+      li {
+        font-weight: 800;
+      }
+    }
+
+    i {
+      font-size: 18px;
+      padding-top: 20px;
+      margin-right: 10px;
+    }
   }
+
+  .message-form{
+    margin-top: 20px;
+    display: none;
+
+    form {
+      input, textarea{
+        border-radius: 10px;
+        border: 1px solid #1131f6;
+        padding: 5px 10px;
+      }
+
+      label {
+        margin-top:10px;
+      }
+    }
+  }
+
+  .message-form.active {
+    display: block;
+  }
+
+}
+
+/* REGOLE DELLA CREATE e EDIT--------------------------------------------------- */
+.apt_create_box, .apt_edit_box {
+  padding-top: 100px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+
+  h3{
+    margin: 35px 0;
+    font-size: 40px;
+    font-weight: 800;
+    color:#4E66F8;
+  }
+
+  form {
+    input, textarea {
+      border-radius: 10px;
+      border: 1px solid #1131f6;
+    }
+
+    .input_img_apt {
+      border: none;
+    }
+  }
+
+  .immagini_margin {
+    margin-bottom: 20px;
+  }
+
 }
 
 
@@ -463,4 +553,3 @@ footer {
   display: flex;
   flex-wrap: wrap;
 }
-
