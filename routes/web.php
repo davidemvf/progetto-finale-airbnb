@@ -9,6 +9,9 @@ Auth::routes();
 // Visualizzazione degli appartamenti nella home
 Route::get('/', 'userSempliceController@index')-> name('home.index');
 
+// Visualizzazione ricerche e appartamenti della home
+Route::get('/apartment_search', 'userSempliceController@search')-> name('apartment.search');
+
 // Creazione appartamenti
 Route::get('/apartment_create', 'userAuthController@create') -> name('apartment.create');
 Route::post('/apartment_store', 'userAuthController@store' ) -> name('apartment.store');
@@ -29,3 +32,5 @@ Route::get('/mymessages_show', 'userAuthController@messagesShow') -> name('messa
 
 // Cancellazione appartamento
 Route::get('/delete/{id}', 'userAuthController@destroy')-> name('apartment.destroy');
+
+

@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xs-12 app-flex testo-slider">
                     <p>The best holiday experience</p>
-                    <h1>Stay like a local</h1>
+                    <h1>{{$city}}</h1>
                     <div class="box-searchbar">
                         <form class="searchbar" action="{{ route('apartment.search')}}">
                             @csrf
@@ -22,13 +22,13 @@
             </div>
         </div>
         <div class="carousel-item active">
-            <img class="d-block w-100 margin-slider" src="img/napoli.jpg" alt="Napoli">
+            <img class="d-block w-100 margin-slider" src="img/{{$city}}.jpg" alt="Napoli">
         </div>
-        <div class="carousel-item">
+        {{-- <div class="carousel-item">
             <img class="d-block w-100 margin-slider" src="img/toscana.jpg" alt="Firenze">
         </div>
         <div class="carousel-item">
             <img class="d-block w-100 margin-slider" src="img/fori-romani.jpg" alt="Roma">
-        </div>
+        </div> --}}
     </div>
 </div>

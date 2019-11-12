@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Apartment;
 use App\Service;
 use App\Message;
@@ -18,6 +19,14 @@ class userSempliceController extends Controller
     {
       $apartments = Apartment::all();
       return view('pages.home', compact('apartments'));
+    }
+
+    // Funzione per visualizzazione appartamenti con ricerca semplice
+    public function search()
+    {
+        $city = $_GET['city'];
+        $apartments = Apartment::where('city', $city) -> get();
+        return view('pages.apartmentSearch', compact('apartments', 'city'));
     }
 
     /**
