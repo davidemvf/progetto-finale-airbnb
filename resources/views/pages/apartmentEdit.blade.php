@@ -4,7 +4,7 @@
 
   <div class="container apt_edit_box">
 
-    <a class="button_style" href="{{ route('home.index') }}">HOME</a>
+    {{-- <a class="button_style" href="{{ route('home.index') }}">HOME</a> --}}
 
     <h3>Modifica appartamento</h3>
 

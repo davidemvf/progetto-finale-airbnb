@@ -3,7 +3,7 @@
 @section('content')
 
   <div class="container apt_create_box">
-    <a class="button_style" href="{{ route('home.index') }}">HOME</a>
+    {{-- <a class="button_style" href="{{ route('home.index') }}">HOME</a> --}}
 
     <h3>Aggiungi un nuovo appartamento</h3>
 
