@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xs-12 app-flex testo-slider">
                     <p>The best holiday experience</p>
-                    <h1>{{ucfirst($city)}}</h1>
+                    <h1>My Apartment</h1>
                     <div class="box-searchbar">
                         <form class="searchbar" action="{{ route('apartment.search')}}">
                             @csrf
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="carousel-item active">
-            <img class="d-block w-100 margin-slider" src="img/{{$city}}.jpg" alt="">
+            <img class="d-block w-100 margin-slider" src="img/my-apartment.jpg" alt="">
         </div>
     </div>
 </div>

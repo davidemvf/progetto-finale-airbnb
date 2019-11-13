@@ -11452,6 +11452,23 @@ header .hamburger-menu ul a:focus {
   color: #4E66F8;
 }
 
+.corpo .box_apartement .anteprima .action {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+}
+
+.corpo .box_apartement .anteprima .action a {
+  font-size: 0.875rem;
+  font-family: "Poppins", sans-serif;
+  color: #4E66F8;
+  margin-right: 20px;
+}
+
 /* REGOLE DELLA READ MORE --------------------------------------------------- */
 
 .apt_box {
