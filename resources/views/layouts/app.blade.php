@@ -85,7 +85,7 @@
             @include('elem.navbar')
         </header>
 
-        <main class="py-4">
+        <main class="py-4 img-log">
             @yield('content')
         </main>
     </div>
