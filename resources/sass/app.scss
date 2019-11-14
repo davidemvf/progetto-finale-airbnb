@@ -378,8 +378,8 @@ header {
 
 }
 
-/* REGOLE DELLA CREATE e EDIT--------------------------------------------------- */
-.apt_create_box, .apt_edit_box {
+/* REGOLE DELLA CREATE e EDIT E VISUALIZZAZIONE MESSAGGI--------------------------------------------------- */
+.apt_create_box, .apt_edit_box, .msgs_box {
   padding-top: 100px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -408,6 +408,24 @@ header {
 
 }
 
+// REGOLE DEI MESSAGGI
+.msgs_box h3 {
+  text-align: center;
+}
+.message_box {
+  width: 70%;
+  border: 1px solid #1131f6;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 12px auto;
+  text-align: center;
+
+  #content_p {
+    font-size: 18px;
+    font-style:italic;
+    color:  #1131f6;
+  }
+}
 
 /* REGOLE DEL FOOTER -------------------------------------------------------- */
 footer {

@@ -33,4 +33,5 @@ Route::get('/mymessages_show', 'userAuthController@messagesShow') -> name('messa
 // Cancellazione appartamento
 Route::get('/delete/{id}', 'userAuthController@destroy')-> name('apartment.destroy');
 
-
+// Sponsorizzazione
+Route::get('/sponsorship', 'userAuthController@sponsorshipCreate') -> name('sponsorship.create');

@@ -4348,7 +4348,7 @@ input[type=button].btn-block {
   background-color: #3490dc;
   border: 0;
   border-radius: 1rem;
-  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   -moz-appearance: none;
        appearance: none;
@@ -4356,7 +4356,7 @@ input[type=button].btn-block {
 
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-moz-range-thumb {
-    -moz-transition: none;
+    -webkit-transition: none;
     transition: none;
   }
 }
@@ -4384,14 +4384,14 @@ input[type=button].btn-block {
   background-color: #3490dc;
   border: 0;
   border-radius: 1rem;
-  -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   appearance: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-ms-thumb {
-    -ms-transition: none;
+    -webkit-transition: none;
     transition: none;
   }
 }
@@ -11526,17 +11526,19 @@ header .hamburger-menu ul a:focus {
   display: block;
 }
 
-/* REGOLE DELLA CREATE e EDIT--------------------------------------------------- */
+/* REGOLE DELLA CREATE e EDIT E VISUALIZZAZIONE MESSAGGI--------------------------------------------------- */
 
 .apt_create_box,
-.apt_edit_box {
+.apt_edit_box,
+.msgs_box {
   padding-top: 100px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
 }
 
 .apt_create_box h3,
-.apt_edit_box h3 {
+.apt_edit_box h3,
+.msgs_box h3 {
   margin: 35px 0;
   font-size: 40px;
   font-weight: 800;
@@ -11546,19 +11548,42 @@ header .hamburger-menu ul a:focus {
 .apt_create_box form input,
 .apt_create_box form textarea,
 .apt_edit_box form input,
-.apt_edit_box form textarea {
+.apt_edit_box form textarea,
+.msgs_box form input,
+.msgs_box form textarea {
   border-radius: 10px;
   border: 1px solid #1131f6;
 }
 
 .apt_create_box form .input_img_apt,
-.apt_edit_box form .input_img_apt {
+.apt_edit_box form .input_img_apt,
+.msgs_box form .input_img_apt {
   border: none;
 }
 
 .apt_create_box .immagini_margin,
-.apt_edit_box .immagini_margin {
+.apt_edit_box .immagini_margin,
+.msgs_box .immagini_margin {
   margin-bottom: 20px;
+}
+
+.msgs_box h3 {
+  text-align: center;
+}
+
+.message_box {
+  width: 70%;
+  border: 1px solid #1131f6;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 12px auto;
+  text-align: center;
+}
+
+.message_box #content_p {
+  font-size: 18px;
+  font-style: italic;
+  color: #1131f6;
 }
 
 /* REGOLE DEL FOOTER -------------------------------------------------------- */

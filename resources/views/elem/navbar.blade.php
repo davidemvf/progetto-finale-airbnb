@@ -5,22 +5,32 @@
         </a>
     </div>
     <div class="header-right">
+
         @guest
         <ul>
+          <li class="list-inline-item">
+              <a href="{{ route('home.index') }}">Home</a>
+          </li>
             <li class="list-inline-item">
                 <a href="{{ route('login') }}">Login</a>
             </li>
             <li class="list-inline-item">
                 <a href="{{ route('register') }}">Register</a>
             </li>
-        </ul> 
+        </ul>
         @else
         <ul>
+          <li class="list-inline-item">
+              <a href="{{ route('home.index') }}">Home</a>
+          </li>
             <li class="list-inline-item">
                 <a href="{{ route('apartment.create') }}">Create property</a>
             </li>
             <li class="list-inline-item">
                 <a href="{{ route('myapartment.show') }}">My property</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="{{ route('messages.show') }}">My messages</a>
             </li>
             <li class="list-inline-item">
                 <a href="{{ route('logout') }}"
@@ -46,7 +56,7 @@
             <li class="list-inline-item">
                 <a href="{{ route('register') }}">Register</a>
             </li>
-        </ul> 
+        </ul>
         @else
         <ul>
             <li class="list-inline-item">

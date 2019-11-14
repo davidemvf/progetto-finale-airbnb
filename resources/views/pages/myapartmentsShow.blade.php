@@ -19,11 +19,11 @@
               <div class="anteprima">
                 <div class="city">
                   <i class="fa fa-map-marker"></i>
-                  <p>{{$apartment -> city}}</p> 
+                  <p>{{$apartment -> city}}</p>
                 </div>
                 <div class="title">
                   <a href="{{ route('apartment.show', $apartment -> id) }}">
-                    <h3>{{$apartment -> title}}</h3> 
+                    <h3>{{$apartment -> title}}</h3>
                   </a>
                 </div>
                 <div class="desc">
@@ -32,6 +32,9 @@
                 <div class="action">
                   <a href="{{ route('apartment.edit', $apartment -> id) }}">
                     UPDATE
+                  </a>
+                  <a href="{{ route('sponsorship.create') }}">
+                    ADD SPONSORSHIP
                   </a>
                   <a href="{{ route('apartment.destroy', $apartment -> id) }}">
                     DELETE PROPERTY

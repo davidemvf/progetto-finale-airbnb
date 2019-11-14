@@ -37,6 +37,11 @@ class userAuthController extends Controller
         return view('pages.apartmentCreate', compact('services'));
     }
 
+    public function sponsorshipCreate()
+    {
+      return view('pages.sponsorship');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -108,7 +113,7 @@ class userAuthController extends Controller
             ->where('user_id', '=', $userId)
             ->orderBy('messages.created_at', 'DESC')
             ->get();
-            
+
         return view('pages.myMessages', compact('messages'));
     }
 

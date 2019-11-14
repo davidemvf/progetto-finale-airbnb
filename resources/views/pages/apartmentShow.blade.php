@@ -41,6 +41,7 @@
         @if ($apartment -> user_id == Auth::id())
           <div class="apt_show_buttons" action="{{ route('apartment.show', $apartment -> id) }}">
             <a class="button_style" href="{{ route('apartment.edit', $apartment -> id) }}">Update</a>
+            <a class="button_style" href="{{ route('sponsorship.create') }}">Add Sponsorship</a>
             <a class="button_style" href="{{ route('apartment.destroy', $apartment -> id) }}">Delete</a>
           </div>
         @endif
