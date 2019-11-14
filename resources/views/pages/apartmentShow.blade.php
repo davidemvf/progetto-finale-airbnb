@@ -47,7 +47,7 @@
         @endif
       </div>
 
-      <button id="write_msg" class="button_style" type="button" name="button">CONTATTA IL PROPRIETARIO</button>
+      <button id="write_msg" class="button_style" type="button" name="button">CONTACT THE OWNER</button>
     </div>
     @include('elem.messageForm')
   </div>
