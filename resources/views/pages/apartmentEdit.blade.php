@@ -18,7 +18,7 @@
 
         <div class="form-group">
           <label for="title">Titolo</label>
-          <input type="text" name="title" class="form-control" placeholder="" value="{{ $apartment -> title }}">
+          <input id="name" type="text" name="title" class="form-control" placeholder="" value="{{ $apartment -> title }}">
         </div>
 
         <div class="form-group">
@@ -59,7 +59,7 @@
 
             <div class="form-group col-md-3">
               <label for="city">Città</label>
-              <input type="text" name="city" class="form-control" placeholder="" value="{{ $apartment -> city }}">
+              <input id="city" type="text" name="city" class="form-control" placeholder="" value="{{ $apartment -> city }}">
             </div>
 
             <div class="form-group col-md-2">
@@ -69,12 +69,12 @@
 
             <div class="form-group col-md-2">
               <label for="cap">CAP</label>
-              <input type="text" name="cap" class="form-control" placeholder="" value="{{ $apartment -> cap }}">
+              <input id="cap" type="text" name="cap" class="form-control" placeholder="" value="{{ $apartment -> cap }}">
             </div>
 
             <div class="form-group col-md-5">
               <label for="address">Indirizzo</label>
-              <input type="text" name="address" class="form-control" placeholder="" value="{{ $apartment -> address }}">
+              <input id="address" type="text" name="address" class="form-control" placeholder="" value="{{ $apartment -> address }}">
             </div>
 
           </div>
@@ -101,6 +101,7 @@
             </div>
           </div>
         @endforeach
+        <div id='map' style='height:500px;width:500px'></div>
 
         <button class="button_style" type="submit" name="button">Update</button>
       </form>

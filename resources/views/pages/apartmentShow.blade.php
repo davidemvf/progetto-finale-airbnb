@@ -36,6 +36,7 @@
           <li class="services_item">{{$service-> service_category}}</li>
         @endforeach
       </ul>
+      <div id='map' style='height:500px;width:500px'></div>
       <div>
         @if ($apartment -> user_id == Auth::id())
           <div class="apt_show_buttons" action="{{ route('apartment.show', $apartment -> id) }}">
