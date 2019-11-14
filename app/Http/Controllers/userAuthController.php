@@ -108,7 +108,6 @@ class userAuthController extends Controller
             ->where('user_id', '=', $userId)
             ->orderBy('messages.created_at', 'DESC')
             ->get();
-            // dd($messages);
             
         return view('pages.myMessages', compact('messages'));
     }
