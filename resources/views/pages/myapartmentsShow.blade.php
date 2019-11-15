@@ -33,7 +33,7 @@
                   <a href="{{ route('apartment.edit', $apartment -> id) }}">
                     UPDATE
                   </a>
-                  <a href="{{ route('sponsorship.create') }}">
+                  <a href="{{ route('sponsorship.index', $apartment -> id) }}">
                     ADD SPONSORSHIP
                   </a>
                   <a href="{{ route('apartment.destroy', $apartment -> id) }}">

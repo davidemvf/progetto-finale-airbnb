@@ -15,6 +15,10 @@
     <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-js/4.47.6/examples/elements.css'/>
     <script src='https://api.tomtom.com/maps-sdk-js/4.47.6/examples/js/form.js'></script>
     <script src='https://api.tomtom.com/maps-sdk-js/4.47.6/examples/sdk/tomtom.min.js'></script>
+    {{-- Braintree --}}
+    <script src='https://js.braintreegateway.com/web/dropin/1.8.1/js/dropin.min.js'></script>
+    {{-- JQuery --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   </head>

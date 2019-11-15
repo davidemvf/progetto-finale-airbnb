@@ -9,6 +9,7 @@ use App\Http\Requests\ApartmentRequest;
 use App\Apartment;
 use App\Service;
 use App\Message;
+use App\Sponsorship;
 
 class userAuthController extends Controller
 {
@@ -26,6 +27,13 @@ class userAuthController extends Controller
 
     }
 
+    public function sponsorshipIndex($id)
+    {
+      $apartment = Apartment::findOrFail($id);
+      $sponsorships = Sponsorship::all();
+      return view('pages.sponsorship', compact('sponsorships', 'apartment'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -37,10 +45,6 @@ class userAuthController extends Controller
         return view('pages.apartmentCreate', compact('services'));
     }
 
-    public function sponsorshipCreate()
-    {
-      return view('pages.sponsorship');
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -119,6 +123,13 @@ class userAuthController extends Controller
             ->get();
 
         return view('pages.myMessages', compact('messages'));
+    }
+
+    public function paymentShow($id, $sponsorship_id)
+    {
+      $apartment = Apartment::findOrFail($id);
+      $sponsorship = Sponsorship::findOrFail($sponsorship_id);
+      return view('pages.payment', compact('apartment', 'sponsorship'));
     }
 
     /**

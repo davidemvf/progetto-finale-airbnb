@@ -34,4 +34,6 @@ Route::get('/mymessages_show', 'userAuthController@messagesShow') -> name('messa
 Route::get('/delete/{id}', 'userAuthController@destroy')-> name('apartment.destroy');
 
 // Sponsorizzazione
-Route::get('/sponsorship', 'userAuthController@sponsorshipCreate') -> name('sponsorship.create');
+Route::get('/sponsorship/{id}', 'userAuthController@sponsorshipIndex') -> name('sponsorship.index');
+Route::get('/apartmentpay/{id}/payment/{sponsorship_id}', 'userAuthController@paymentShow') -> name('payment.show');
+Route::get('/payment/make', 'PaymentsController@make') -> name('payment.make');
