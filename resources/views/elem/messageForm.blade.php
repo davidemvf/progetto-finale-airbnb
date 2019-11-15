@@ -43,7 +43,7 @@
     <div class="form-group">
       <label for="content">Messaggio</label>
       <textarea class="form-control" name="content" rows="8" placeholder="scrivi un messaggio"></textarea>
-      <button class="button_style" type="submit" name="button">Invia</button>
+      <button class="button_style" type="submit" name="button">Submit</button>
     </div>
 
   </form>

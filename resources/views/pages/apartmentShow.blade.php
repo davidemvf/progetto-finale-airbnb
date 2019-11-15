@@ -15,10 +15,12 @@
 
     <div action="{{ route('apartment.show', $apartment -> id) }}">
 
-      <h3>{{ $apartment -> title }}</h3>
+      <h3 id="name">{{ $apartment -> title }}</h3>
 
-      <p id="city_p"> <i class="fa fa-map-marker" aria-hidden="true"></i> {{ $apartment -> city }} - {{ $apartment -> prov }}</p>
-      <p>{{ $apartment -> address }} - {{ $apartment -> cap }}</p>
+      <span id="city" class="city_p"> <i class="fa fa-map-marker" aria-hidden="true"></i> {{ $apartment -> city }}</span><span class="city_p"> - {{ $apartment -> prov }}</span>
+      <p>
+        <span id="address">{{ $apartment -> address }}</span><span> - </span><span id="cap">{{ $apartment -> cap }}</span>
+      </p>
       <p>{{ $apartment -> desc }}</p>
 
       <div class="info_apt_box">
@@ -36,7 +38,7 @@
           <li class="services_item">{{$service-> service_category}}</li>
         @endforeach
       </ul>
-      <div id='map' style='height:500px;width:500px'></div>
+      <div id='map' class='map'></div>
       <div>
         @if ($apartment -> user_id == Auth::id())
           <div class="apt_show_buttons" action="{{ route('apartment.show', $apartment -> id) }}">

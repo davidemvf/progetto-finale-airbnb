@@ -105,8 +105,12 @@ class userAuthController extends Controller
 
     public function messagesShow()
     {
-
         $userId = Auth::user() -> id;
+
+        // $apartments = DB::table('messages')
+        //     ->join('apartments', 'apartments.id', '=', 'messages.apartment_id')
+        //     ->where('user_id', '=', $userId)
+        //     ->get();
 
         $messages = DB::table('apartments')
             ->join('messages', 'apartments.id', '=', 'messages.apartment_id')
