@@ -33,9 +33,9 @@ function showMap() {
   var city = $("#city").text();
   var cap = $("#cap").text();
   var address = $("#address").text();
-  
+
   var query = address + ' ' + cap + ' ' + city
-  
+
   $.ajax({
       method: "GET",
       url: 'https://api.tomtom.com/search/2/search/' + query + '.json?countrySet=ITA&key=VfA8Eaif2Ag7Vzd8hJ9vG7q9DIL4WzDn',
