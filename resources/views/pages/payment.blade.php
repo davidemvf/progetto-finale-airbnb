@@ -16,12 +16,11 @@
     $(document).ready(init);
 
     function init() {
-    var button = document.querySelector('#submit-button');
+    var button = document.querySelector('#submit_button');
     braintree.dropin.create({
       authorization: "{{ Braintree_ClientToken::generate() }}",
       container: '#dropin-container'
     }, function (createErr, instance) {
-      document.addEventListener('DOMContentLoaded', function () {
       button.addEventListener('click', function () {
         instance.requestPaymentMethod(function (err, payload) {
           $.get('{{ route('payment.make', [$id = $apartment -> id, $sponsorship_id = $sponsorship -> id]) }}', {payload}, function (response) {
@@ -33,7 +32,6 @@
           }, 'json');
         });
       });
-    });
   });
   };
   </script>
