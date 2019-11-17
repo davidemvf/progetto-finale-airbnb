@@ -1,13 +1,15 @@
 @extends('layouts.main-layout')
 
 @section('content')
-  <div class="">
+  <div class="container">
     <div class="payment_box">
-      <div class="">
-        <h3><strong>{{ $sponsorship -> price }}€</strong> per il tuo annuncio: <strong>{{ $apartment -> title }}</h3></strong>
+        <h3>
+          Hai scelto la promo da {{ $sponsorship -> price }}€ per il tuo annuncio.
+          <br>
+          Procededi pure al pagamento.
+        </h3>
         <div id="dropin-container"></div>
-        <button id="submit_button">Paga</button>
-      </div>
+        <button class="button_style" id="submit_button">CONFERMA PAGAMENTO</button>
     </div>
  </div>
 

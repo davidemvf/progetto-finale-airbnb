@@ -11557,6 +11557,7 @@ header .hamburger-menu ul a:focus {
 .apt_create_box,
 .apt_edit_box,
 .msgs_box,
+.spons_box,
 .payment_box {
   padding-top: 100px;
   font-family: "Poppins", sans-serif;
@@ -11566,6 +11567,7 @@ header .hamburger-menu ul a:focus {
 .apt_create_box h3,
 .apt_edit_box h3,
 .msgs_box h3,
+.spons_box h3,
 .payment_box h3 {
   margin: 35px 0;
   font-size: 40px;
@@ -11579,6 +11581,8 @@ header .hamburger-menu ul a:focus {
 .apt_edit_box form textarea,
 .msgs_box form input,
 .msgs_box form textarea,
+.spons_box form input,
+.spons_box form textarea,
 .payment_box form input,
 .payment_box form textarea {
   border-radius: 10px;
@@ -11588,6 +11592,7 @@ header .hamburger-menu ul a:focus {
 .apt_create_box form .input_img_apt,
 .apt_edit_box form .input_img_apt,
 .msgs_box form .input_img_apt,
+.spons_box form .input_img_apt,
 .payment_box form .input_img_apt {
   border: none;
 }
@@ -11595,6 +11600,7 @@ header .hamburger-menu ul a:focus {
 .apt_create_box .immagini_margin,
 .apt_edit_box .immagini_margin,
 .msgs_box .immagini_margin,
+.spons_box .immagini_margin,
 .payment_box .immagini_margin {
   margin-bottom: 20px;
 }
@@ -11624,6 +11630,36 @@ header .hamburger-menu ul a:focus {
   font-size: 18px;
   font-style: italic;
   color: #1131f6;
+}
+
+/* REGOLE SPONSOR */
+
+.spons_box {
+  text-align: center;
+}
+
+.spons_box h3 {
+  font-size: 30px;
+}
+
+.spons_box .spons_group {
+  margin-top: 50px;
+  margin-bottom: 35px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* REGOLE DEL PAGAMENTO */
+
+.payment_box {
+  text-align: center;
+}
+
+.payment_box h3 {
+  font-size: 30px;
+}
+
+.payment_box #submit_button {
+  margin-bottom: 60px;
 }
 
 /* REGOLE DEL FOOTER -------------------------------------------------------- */

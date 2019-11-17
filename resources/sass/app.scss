@@ -399,7 +399,11 @@ header {
 }
 
 /* REGOLE DELLA CREATE e EDIT E VISUALIZZAZIONE MESSAGGI--------------------------------------------------- */
-.apt_create_box, .apt_edit_box, .msgs_box, .payment_box {
+.apt_create_box,
+.apt_edit_box,
+.msgs_box,
+.spons_box,
+.payment_box {
   padding-top: 100px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -432,6 +436,7 @@ header {
 .msgs_box h3 {
   text-align: center;
 }
+
 .message_box {
   width: 70%;
   border: 1px solid #1131f6;
@@ -439,6 +444,7 @@ header {
   padding: 50px;
   margin: 12px auto;
   text-align: center;
+
   h4 {
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
@@ -450,6 +456,36 @@ header {
     font-size: 18px;
     font-style:italic;
     color:  #1131f6;
+  }
+}
+
+/* REGOLE SPONSOR */
+.spons_box {
+  text-align: center;
+
+  h3 {
+    font-size: 30px;
+  }
+
+  .spons_group {
+    margin-top: 50px;
+    margin-bottom: 35px;
+    font-family: 'Poppins', sans-serif;
+
+
+  }
+}
+
+/* REGOLE DEL PAGAMENTO */
+.payment_box {
+  text-align: center;
+
+  h3 {
+    font-size: 30px;
+  }
+
+  #submit_button {
+    margin-bottom: 60px;
   }
 }
 
