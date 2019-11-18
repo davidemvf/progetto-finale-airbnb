@@ -54,20 +54,18 @@ class userSempliceController extends Controller
           'email' => 'required'
         ]);
 
-        // $apartment = Apartment::findOrFail($id);
-        // $message = Message::create($validatedData);
+
         $validatedData['apartment_id'] = $id;
         // dd($apartment);
         $newMessage = new Message;
         $newMessage->fill($validatedData);
-        // $newMessage->save();
+
         $newMessage = Message::create($validatedData);
 
-        // $request->session()->flash('status', 'Il messaggio è stato inviato correttamente');
-        // $request->session()->flash('error', 'Si è verificato un errore. Inviare un nuovo messaggio');
+
 
         return redirect('apartment/' . $id);
-        // return back()->withInput([]);
+
     }
 
     /**
@@ -79,7 +77,7 @@ class userSempliceController extends Controller
     public function show($id)
     {
 
-        // $services = Service::where('apartment_id', $id)->first();
+        
 
         $apartment = Apartment::findOrFail($id);
         return view('pages.apartmentShow', compact('apartment', 'user'));
