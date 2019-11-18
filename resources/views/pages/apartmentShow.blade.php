@@ -2,9 +2,6 @@
 
 @section('content')
   <div class="container apt_box">
-    {{-- <div>
-      <a href="{{ route('home.index') }}">HOME PAGE</a>
-    </div> --}}
     <div class="card_box">
       <div class="card-group">
         <div class="card">

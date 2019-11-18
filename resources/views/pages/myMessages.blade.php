@@ -3,11 +3,9 @@
 @section('content')
   <div class="container msgs_box">
     <h3>Messaggi ricevuti</h3>
-    
-      {{-- @foreach ($apartments as $apartment)
-        <h4>{{$apartment -> title}}</h4>
-      @endforeach --}}
+
       
+
       @foreach ($messages as $message)
       <div class="message_box">
         <p>Messaggio scritto da: <b>{{$message -> firstname}} {{$message -> lastname}}</b></p>
@@ -16,6 +14,6 @@
         <h6>{{ $message -> created_at}}</h6>
       </div>
       @endforeach
-    
+
   </div>
 @endsection
